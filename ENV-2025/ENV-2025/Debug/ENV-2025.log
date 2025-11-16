@@ -1,0 +1,33 @@
+﻿  Error.cpp
+  FST.cpp
+C:\KPO KP\ENV-2025\ENV-2025\pch.h(29,10): error C1083: Не удается открыть файл включение: LexAnaliz.h: No such file or directory,
+  (компиляция исходного файла "Error.cpp")
+  
+C:\KPO KP\ENV-2025\ENV-2025\pch.h(29,10): error C1083: Не удается открыть файл включение: LexAnaliz.h: No such file or directory,
+  (компиляция исходного файла "FST.cpp")
+  
+  In.cpp
+C:\KPO KP\ENV-2025\ENV-2025\pch.h(29,10): error C1083: Не удается открыть файл включение: LexAnaliz.h: No such file or directory,
+  (компиляция исходного файла "In.cpp")
+  
+  IT.cpp
+C:\KPO KP\ENV-2025\ENV-2025\pch.h(29,10): error C1083: Не удается открыть файл включение: LexAnaliz.h: No such file or directory,
+  (компиляция исходного файла "IT.cpp")
+  
+  Log.cpp
+C:\KPO KP\ENV-2025\ENV-2025\pch.h(29,10): error C1083: Не удается открыть файл включение: LexAnaliz.h: No such file or directory,
+  (компиляция исходного файла "Log.cpp")
+  
+  LT.cpp
+C:\KPO KP\ENV-2025\ENV-2025\pch.h(29,10): error C1083: Не удается открыть файл включение: LexAnaliz.h: No such file or directory,
+  (компиляция исходного файла "LT.cpp")
+  
+  Parm.cpp
+C:\KPO KP\ENV-2025\ENV-2025\pch.h(29,10): error C1083: Не удается открыть файл включение: LexAnaliz.h: No such file or directory,
+  (компиляция исходного файла "Parm.cpp")
+  
+  pch.cpp
+C:\KPO KP\ENV-2025\ENV-2025\pch.h(29,10): error C1083: Не удается открыть файл включение: LexAnaliz.h: No such file or directory,
+  (компиляция исходного файла "pch.cpp")
+  
+  Создание кода...
