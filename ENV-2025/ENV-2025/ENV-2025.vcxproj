@@ -80,6 +80,8 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\KPO_CP\ENV-2025\Debug\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies);ENV2025lib.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -123,8 +125,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="ENV2025_Lib.h" />
     <ClInclude Include="Error.h" />
     <ClInclude Include="FST.h" />
+    <ClInclude Include="Generator.h" />
     <ClInclude Include="Graphs.h" />
     <ClInclude Include="Greibach.h" />
     <ClInclude Include="In.h" />
@@ -132,21 +136,29 @@
     <ClInclude Include="LexAnaliz.h" />
     <ClInclude Include="Log.h" />
     <ClInclude Include="LT.h" />
+    <ClInclude Include="MFST.h" />
     <ClInclude Include="Parm.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="PolishNotation.h" />
     <ClInclude Include="Rule.h" />
+    <ClInclude Include="Semantic.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="ENV-2025.cpp" />
     <ClCompile Include="Error.cpp" />
     <ClCompile Include="FST.cpp" />
+    <ClCompile Include="Generator.cpp" />
     <ClCompile Include="Greibach.cpp" />
     <ClCompile Include="In.cpp" />
     <ClCompile Include="IT.cpp" />
     <ClCompile Include="LexAnaliz.cpp" />
     <ClCompile Include="Log.cpp" />
     <ClCompile Include="LT.cpp" />
+    <ClCompile Include="MFST.cpp" />
     <ClCompile Include="Parm.cpp" />
     <ClCompile Include="pch.cpp" />
+    <ClCompile Include="PolishNotation.cpp" />
+    <ClCompile Include="Semantic.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

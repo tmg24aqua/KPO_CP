@@ -2,7 +2,7 @@
 #include "FST.h"
 #define N_GRAPHS 23
 
-// ãðàôû ïåðåõîäîâ äëÿ ENV-2025
+// ˜˜˜˜˜ ˜˜˜˜˜˜˜˜˜ ˜˜˜ ENV-2025
 #define GRAPH_SEPARATORS 2,\
 	FST::NODE(16,\
 			FST::RELATION(';',1), FST::RELATION('=',1),\
@@ -182,6 +182,15 @@
 	FST::NODE(1, FST::RELATION('r',4)),\
 	FST::NODE()
 
+#define GRAPH_SYMBOL 7, \
+	FST::NODE(1, FST::RELATION('s',1)),\
+	FST::NODE(1, FST::RELATION('y',2)),\
+	FST::NODE(1, FST::RELATION('m',3)),\
+	FST::NODE(1, FST::RELATION('b',4)),\
+	FST::NODE(1, FST::RELATION('o',5)),\
+	FST::NODE(1, FST::RELATION('l',6)),\
+	FST::NODE()
+
 #define GRAPH_MAIN 5, \
 	FST::NODE(1,FST::RELATION('m',1)),\
 	FST::NODE(1,FST::RELATION('a',2)),\
@@ -206,6 +215,18 @@
 	FST::NODE(1, FST::RELATION('i',3)),\
 	FST::NODE(1, FST::RELATION('t',4)),\
 	FST::NODE(1, FST::RELATION('e',5)),\
+	FST::NODE()
+
+#define GRAPH_WRITELINE 10, \
+	FST::NODE(1, FST::RELATION('w',1)),\
+	FST::NODE(1, FST::RELATION('r',2)),\
+	FST::NODE(1, FST::RELATION('i',3)),\
+	FST::NODE(1, FST::RELATION('t',4)),\
+	FST::NODE(1, FST::RELATION('e',5)),\
+	FST::NODE(1, FST::RELATION('l',6)),\
+	FST::NODE(1, FST::RELATION('i',7)),\
+	FST::NODE(1, FST::RELATION('n',8)),\
+	FST::NODE(1, FST::RELATION('e',9)),\
 	FST::NODE()
 
 #define GRAPH_RETURN 7, \
@@ -249,4 +270,15 @@
     FST::NODE(1, FST::RELATION('m',3)),\
     FST::NODE(1, FST::RELATION('e',4)),\
     FST::NODE(1, FST::RELATION('s',5)),\
+    FST::NODE()
+
+#define GRAPH_IS 3, \
+    FST::NODE(1, FST::RELATION('i',1)),\
+    FST::NODE(1, FST::RELATION('s',2)),\
+    FST::NODE()
+
+#define GRAPH_END 4, \
+    FST::NODE(1, FST::RELATION('e',1)),\
+    FST::NODE(1, FST::RELATION('n',2)),\
+    FST::NODE(1, FST::RELATION('d',3)),\
     FST::NODE()

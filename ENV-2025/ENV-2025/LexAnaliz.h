@@ -2,11 +2,12 @@
 #include "pch.h"
 
 #define TYPE_INTEGER	"integer"
-#define TYPE_CHAR	    "char"
+#define TYPE_SYMBOL	    "symbol"
 #define COMPARE_FUNC	"compare"
-#define RANDOM_FUNC		"random"
+#define LENGTH_FUNC		"length"
 #define MAIN_FUNC		"main"
 #define WRITE_FUNC		"write"
+#define WRITELINE_FUNC	"writeline"
 #define REPEAT_KW		"repeat"
 #define TIMES_KW		"times"
 #define IS_KW		    "is"
@@ -15,9 +16,9 @@
 #define TYPE_KW		    "type"
 #define RETURN_KW		"return"
 #define END_KW		    "end"
-#define DO_KW		    "do"
+#define FUNCTION_KW     "function"
 
-#define ISTYPE(str) ( !strcmp(str, TYPE_INTEGER) || !strcmp(str, TYPE_CHAR) )
+#define ISTYPE(str) ( !strcmp(str, TYPE_INTEGER) || !strcmp(str, TYPE_SYMBOL) )
 
 namespace Lex
 {
@@ -32,36 +33,44 @@ namespace Lex
 	{
 		char lexema;
 		FST::FST graph;
+
+		Graph(char lex, FST::FST g) : lexema(lex), graph(g) {}
+		Graph() = delete;
+		Graph(const Graph&) = default;
+		Graph& operator=(const Graph&) = default;
 	};
 
-	IT::Entry* getEntry(	// формирует и возвращает строку ТИ
-		Lex::LEX& tables,	// ТЛ + ТИ
-		char lex,			// лексема
-		char* id,			// идентификатор
-		char* idtype,		// предыдущая (тип)
-		bool isParam,		// признак параметра функции
-		bool isFunc,		// признак функции
-		Log::LOG log,		// протокол
-		int line,			// строка в исходном тексте
-		bool& rc_err		// флаг ошибки(по ссылке)
+	IT::Entry* getEntry(	//     
+		Lex::LEX& tables,	//  + 
+		char lex,			// 
+		char* id,			// 
+		char* idtype,		//  ()
+		bool isParam,		//   
+		bool isFunc,		//  
+		Log::LOG log,		// 
+		int line,			//    
+		bool& rc_err		//  ( )
 	);
 
-	struct ERROR_S			// тип исключения для throw ERROR_THROW | ERROR_THROW_IN
+	struct ERROR_S			//    throw ERROR_THROW | ERROR_THROW_IN
 	{
 		int id;
-		char message[ERROR_MAXSIZE_MESSAGE];	// сообщение			
+		char message[ERROR_MAXSIZE_MESSAGE];	// 			
 		struct
 		{
-			short line = -1;	// номер строки (0, 1, 2, ...)
-			short col = -1;		// номер позиции в строке(0, 1, 2, ...)
+			short line = -1;	//   (0, 1, 2, ...)
+			short col = -1;		//    (0, 1, 2, ...)
 		} position;
 	};
 
 	bool analyze(LEX& tables, In::IN& in, Log::LOG& log, Parm::PARM& parm);
-	int getIndexInLT(LT::LexTable& lextable, int itTableIndex);	// индекс первой встречи в таблице лексем
+	int getIndexInLT(LT::LexTable& lextable, int itTableIndex);	//      
 
-	// Новые функции для ENV-2025
-	bool isStdFunction(const char* id);	// проверка на стандартную функцию
-	bool isKeyword(const char* id);		// проверка на ключевое слово
-	IT::IDDATATYPE getTypeFromString(const char* typeStr); // преобразование строки в тип данных
+	//   ENV-2025
+	bool isStdFunction(const char* id);	//    
+	bool isKeyword(const char* id);		//    
+	IT::IDDATATYPE getTypeFromString(const char* typeStr); //     
+	bool isLogicalLiteral(const char* id); //    
+	bool isHexLiteral(const char* str);   //    
+	bool isBinaryLiteral(const char* str); //    
 };

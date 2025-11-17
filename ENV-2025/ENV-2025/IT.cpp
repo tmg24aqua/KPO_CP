@@ -112,7 +112,7 @@ namespace IT
 			}
 			entry->value.vint = temp;
 		}
-		else if (entry->iddatatype == CHAR)
+		else if (entry->iddatatype == SYM) // ИСПРАВЛЕНО: было CHAR, стало SYM
 		{
 			// Обработка символьных литералов в одинарных кавычках
 			if (value[0] == '\'' && strlen(value) >= 3)
@@ -123,11 +123,11 @@ namespace IT
 					Log::WriteError(stream, Error::geterrorin(321, entry->idxfirstLE, 0));
 					rc = false;
 				}
-				entry->value.vsymbol = value[1]; // Берем символ между кавычками
+				entry->value.symbol = value[1]; // ИСПРАВЛЕНО: было vsymbol, стало symbol
 			}
 			else
 			{
-				entry->value.vsymbol = value[0]; // Одиночный символ
+				entry->value.symbol = value[0]; // ИСПРАВЛЕНО: было vsymbol, стало symbol
 			}
 		}
 		else if (entry->iddatatype == UNDEF && entry->idtype == L)
@@ -220,7 +220,7 @@ namespace IT
 			}
 			entry->value.vint = temp;
 		}
-		else if (entry->iddatatype == CHAR)
+		else if (entry->iddatatype == SYM) // ИСПРАВЛЕНО: было CHAR, стало SYM
 		{
 			// Обработка символьных литералов в одинарных кавычках
 			if (value[0] == '\'' && strlen(value) >= 3)
@@ -231,11 +231,11 @@ namespace IT
 					if (stream) Log::WriteError(stream, Error::geterrorin(321, line, col));
 					rc = false;
 				}
-				entry->value.vsymbol = value[1]; // Берем символ между кавычками
+				entry->value.symbol = value[1]; // ИСПРАВЛЕНО: было vsymbol, стало symbol
 			}
 			else if (strlen(value) == 1)
 			{
-				entry->value.vsymbol = value[0]; // Одиночный символ
+				entry->value.symbol = value[0]; // ИСПРАВЛЕНО: было vsymbol, стало symbol
 			}
 			else
 			{
@@ -267,40 +267,41 @@ namespace IT
 			IT::Entry* e = &idtable.table[i];
 			char type[50] = "";
 
+			// ИСПРАВЛЕНО: заменены все strcat на strcat_s
 			switch (e->iddatatype)
 			{
 			case IT::IDDATATYPE::INT:
-				strcat(type, "  integer ");
+				strcat_s(type, 50, "  integer ");
 				break;
-			case IT::IDDATATYPE::CHAR:
-				strcat(type, "   char   ");
+			case IT::IDDATATYPE::SYM: // ИСПРАВЛЕНО: было CHAR, стало SYM
+				strcat_s(type, 50, "   char   ");
 				break;
 			case IT::IDDATATYPE::PROC:
-				strcat(type, " procedure");
+				strcat_s(type, 50, " procedure");
 				break;
 			case IT::IDDATATYPE::UNDEF:
-				strcat(type, " UNDEFINED");
+				strcat_s(type, 50, " UNDEFINED");
 				break;
 			}
 			switch (e->idtype)
 			{
 			case IT::IDTYPE::V:
-				strcat(type, " variable ");
+				strcat_s(type, 50, " variable ");
 				break;
 			case IT::IDTYPE::F:
-				strcat(type, " function ");
+				strcat_s(type, 50, " function ");
 				break;
 			case IT::IDTYPE::P:
-				strcat(type, " parameter");
+				strcat_s(type, 50, " parameter");
 				break;
 			case IT::IDTYPE::L:
-				strcat(type, " literal  ");
+				strcat_s(type, 50, " literal  ");
 				break;
 			case IT::IDTYPE::S:
-				strcat(type, " std func ");
+				strcat_s(type, 50, " std func ");
 				break;
 			default:
-				strcat(type, " UNDEFINED");
+				strcat_s(type, 50, " UNDEFINED");
 				break;
 			}
 
@@ -317,8 +318,8 @@ namespace IT
 					else
 						*stream << e->value.vint;
 				}
-				else if (e->iddatatype == IT::IDDATATYPE::CHAR)
-					*stream << "'" << e->value.vsymbol << "'";
+				else if (e->iddatatype == IT::IDDATATYPE::SYM) // ИСПРАВЛЕНО: было CHAR, стало SYM
+					*stream << "'" << e->value.symbol << "'"; // ИСПРАВЛЕНО: было vsymbol, стало symbol
 				else if (e->iddatatype == IT::IDDATATYPE::UNDEF && e->idtype == L)
 				{
 					if (e->value.vint == 1)
@@ -340,7 +341,7 @@ namespace IT
 					case IT::IDDATATYPE::INT:
 						*stream << "integer";
 						break;
-					case IT::IDDATATYPE::CHAR:
+					case IT::IDDATATYPE::SYM: // ИСПРАВЛЕНО: было CHAR, стало SYM
 						*stream << "char";
 						break;
 					case IT::IDDATATYPE::UNDEF:

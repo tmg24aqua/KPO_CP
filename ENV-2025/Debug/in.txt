@@ -1,0 +1,101 @@
+integer function string_compare(char str1, char str2)
+    is str1 == str2
+    true [
+        return 1
+    ]
+    false [
+        return 0
+    ]
+end
+
+integer function calculate_power(integer base, integer exponent)
+    type integer result = 1
+    type integer i = 1
+    
+    repeat exponent times [
+        result = result * base
+    ]
+    
+    return result
+end
+
+main
+{
+    write "=== ÄÅÌÎÍÑÒĞÀÖÈß ÖÅËÎ×ÈÑËÅÍÍÛÕ ÎÏÅĞÀÖÈÉ ==="
+    writeline ""
+    
+    type integer a = 0b1101
+    type integer b = 0x5
+    
+    write "a (äâîè÷íîå 0b1101) = "
+    writeline a
+    write "b (øåñòíàäöàòåğè÷íîå 0x5) = "
+    writeline b
+    
+    write "a + b = "
+    writeline a + b
+    write "a - b = "
+    writeline a - b
+    write "a * b = "
+    writeline a * b
+    write "a / b = "
+    writeline a / b
+    write "a % b = "
+    writeline a % b
+    
+    writeline ""
+    write "=== ÄÅÌÎÍÑÒĞÀÖÈß ÖÈÊËÀ ==="
+    writeline ""
+    
+    type integer counter = 1
+    repeat 4 times [
+        write "Èòåğàöèÿ "
+        write counter
+        write ": çíà÷åíèå = "
+        writeline counter * 2
+        counter = counter + 1
+    ]
+    
+    writeline ""
+    write "=== ÄÅÌÎÍÑÒĞÀÖÈß ÑÈÌÂÎËÜÍÛÕ ÎÏÅĞÀÖÈÉ ==="
+    writeline ""
+    
+    type char char1 = 'A'
+    type char char2 = 'B'
+    type char char3 = 'A'
+    
+    write "Ñèìâîë 1: "
+    writeline char1
+    write "Ñèìâîë 2: "
+    writeline char2
+    write "Ñèìâîë 3: "
+    writeline char3
+    
+    type integer compare_result1 = string_compare(char1, char2)
+    write "Ñğàâíåíèå A è B: "
+    writeline compare_result1
+    
+    type integer compare_result2 = string_compare(char1, char3)
+    write "Ñğàâíåíèå A è A: "
+    writeline compare_result2
+    
+    writeline ""
+    write "=== ÄÅÌÎÍÑÒĞÀÖÈß ÏĞÎÈÇÂÎËÜÍÎÉ ÔÓÍÊÖÈÈ ==="
+    writeline ""
+    
+    type integer power_result = calculate_power(2, 4)
+    write "2 â ñòåïåíè 4 = "
+    writeline power_result
+    
+    writeline ""
+    write "=== ÄÅÌÎÍÑÒĞÀÖÈß ËÎÃÈ×ÅÑÊÈÕ ËÈÒÅĞÀËÎÂ ==="
+    writeline ""
+    
+    write "Ëîãè÷åñêèå çíà÷åíèÿ: "
+    write true
+    write " "
+    write false
+    writeline ""
+    
+    return 0
+}

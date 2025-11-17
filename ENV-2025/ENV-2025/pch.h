@@ -32,4 +32,5 @@
 #include "Semantic.h"
 #include "PolishNotation.h"
 #include "Generator.h"
+#include "ENV2025_Lib.h"
 #endif PCH_H

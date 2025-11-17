@@ -1,38 +1,38 @@
-#pragma once
 #include "pch.h"
+
 namespace Lex
 {
 	Graph graphs[N_GRAPHS] =
 	{
-		{ LEX_SEPARATORS, FST::FST(GRAPH_SEPARATORS) },
-		{ LEX_ID, FST::FST(GRAPH_ID) },
-		{ LEX_ID_TYPE, FST::FST(GRAPH_INTEGER) },
-		{ LEX_ID_TYPE, FST::FST(GRAPH_CHAR) },
-		{ LEX_STDFUNC, FST::FST(GRAPH_COMPARE) },
-		{ LEX_STDFUNC, FST::FST(GRAPH_RANDOM) },
-		{ LEX_LITERAL, FST::FST(GRAPH_INTEGER_LITERAL) },
-		{ LEX_LITERAL, FST::FST(GRAPH_BINARY_LITERAL) },
-		{ LEX_LITERAL, FST::FST(GRAPH_HEX_LITERAL) },
-		{ LEX_LITERAL, FST::FST(GRAPH_STRING_LITERAL) },
-		{ LEX_LITERAL, FST::FST(GRAPH_CHAR_LITERAL) },
-		{ LEX_FUNCTION, FST::FST(GRAPH_FUNCTION) },
-		{ LEX_MAIN, FST::FST(GRAPH_MAIN) },
-		{ LEX_TYPE, FST::FST(GRAPH_TYPE) },
-		{ LEX_RETURN, FST::FST(GRAPH_RETURN) },
-		{ LEX_WRITE, FST::FST(GRAPH_WRITE) },
-		{ LEX_REPEAT, FST::FST(GRAPH_REPEAT) },
-		{ LEX_TIMES, FST::FST(GRAPH_TIMES) },
-		{ LEX_IS, FST::FST(GRAPH_IS) },
-		{ LEX_TRUE, FST::FST(GRAPH_TRUE) },
-		{ LEX_FALSE, FST::FST(GRAPH_FALSE) },
-		{ LEX_DO, FST::FST(GRAPH_DO) },
-		{ LEX_END, FST::FST(GRAPH_END) }
+		Graph(LEX_SEPARATORS, FST::FST(GRAPH_SEPARATORS)),
+		Graph(LEX_ID, FST::FST(GRAPH_ID)),
+		Graph(LEX_ID_TYPE, FST::FST(GRAPH_INTEGER)),
+		Graph(LEX_ID_TYPE, FST::FST(GRAPH_SYMBOL)),
+		Graph(LEX_STDFUNC, FST::FST(GRAPH_COMPARE)),
+		Graph(LEX_LITERAL, FST::FST(GRAPH_INTEGER_LITERAL)),
+		Graph(LEX_LITERAL, FST::FST(GRAPH_BINARY_LITERAL)),
+		Graph(LEX_LITERAL, FST::FST(GRAPH_HEX_LITERAL)),
+		Graph(LEX_LITERAL, FST::FST(GRAPH_STRING_LITERAL)),
+		Graph(LEX_LITERAL, FST::FST(GRAPH_CHAR_LITERAL)),
+		Graph(LEX_FUNCTION, FST::FST(GRAPH_FUNCTION)),
+		Graph(LEX_MAIN, FST::FST(GRAPH_MAIN)),
+		Graph(LEX_TYPE, FST::FST(GRAPH_TYPE)),
+		Graph(LEX_RETURN, FST::FST(GRAPH_RETURN)),
+		Graph(LEX_WRITE, FST::FST(GRAPH_WRITE)),
+		Graph(LEX_WRITELINE, FST::FST(GRAPH_WRITELINE)),
+		Graph(LEX_REPEAT, FST::FST(GRAPH_REPEAT)),
+		Graph(LEX_TIMES, FST::FST(GRAPH_TIMES)),
+		Graph(LEX_IS, FST::FST(GRAPH_IS)),
+		Graph(LEX_TRUE, FST::FST(GRAPH_TRUE)),
+		Graph(LEX_FALSE, FST::FST(GRAPH_FALSE)),
+		Graph(LEX_DO, FST::FST(GRAPH_DO)),
+		Graph(LEX_END, FST::FST(GRAPH_END))
 	};
 
 	char* getScopeName(IT::IdTable idtable, char* prevword)
 	{
-		char* a = new char[5];
-		a = (char*)"main\0";
+		char* a = new char[6];
+		strcpy_s(a, 6, "main");
 		if (strcmp(prevword, MAIN_FUNC) == 0)
 			return a;
 		for (int i = idtable.size - 1; i >= 0; i--)
@@ -43,7 +43,7 @@ namespace Lex
 
 	bool isLiteral(char* id)
 	{
-		if (isdigit(*id) || *id == IN_CODE_QUOTE || *id == '\'' || *id == 't' || *id == 'f' || *id == NULL)
+		if (isdigit(*id) || *id == IN_CODE_QUOTE || *id == '\'' || *id == 't' || *id == 'f' || *id == '\0')
 			return true;
 		return false;
 	}
@@ -52,8 +52,6 @@ namespace Lex
 	{
 		if (!strcmp(COMPARE_FUNC, id))
 			return IT::STDFNC::F_COMPARE;
-		if (!strcmp(RANDOM_FUNC, id))
-			return IT::STDFNC::F_RANDOM;
 		return IT::STDFNC::F_NOT_STD;
 	}
 
@@ -69,11 +67,14 @@ namespace Lex
 					if (ittable.table[i].value.vint == atoi(value))
 						return i;
 					break;
-				case IT::IDDATATYPE::CHAR:
-					if (ittable.table[i].value.vsymbol == value[1])
+				case IT::IDDATATYPE::SYM:
+					if (ittable.table[i].value.symbol == value[1])
 						return i;
 					break;
-					// Убрана обработка STR, так как его нет в IDDATATYPE
+				case IT::IDDATATYPE::STR:
+					if (strcmp(ittable.table[i].value.vstr.str, value) == 0)
+						return i;
+					break;
 				}
 			}
 		}
@@ -84,16 +85,16 @@ namespace Lex
 	{
 		if (idtype == nullptr)
 			return IT::IDDATATYPE::UNDEF;
-		if (!strcmp(TYPE_CHAR, idtype))
-			return IT::IDDATATYPE::CHAR;
+		if (!strcmp(TYPE_SYMBOL, idtype))
+			return IT::IDDATATYPE::SYM;
 		if (!strcmp(TYPE_INTEGER, idtype))
 			return IT::IDDATATYPE::INT;
 		if (isdigit(*curword) || (*curword == '0' && (curword[1] == 'x' || curword[1] == 'b')))
 			return IT::IDDATATYPE::INT;
 		else if (*curword == IN_CODE_QUOTE)
-			return IT::IDDATATYPE::INT; // Строки как INT для упрощения
+			return IT::IDDATATYPE::STR;
 		else if (*curword == '\'')
-			return IT::IDDATATYPE::CHAR;
+			return IT::IDDATATYPE::SYM;
 		else if (!strcmp(curword, TRUE_KW) || !strcmp(curword, FALSE_KW))
 			return IT::IDDATATYPE::INT;
 
@@ -104,10 +105,10 @@ namespace Lex
 	{
 		static int literalNumber = 1;
 		char* buf = new char[SCOPED_ID_MAXSIZE];
-		char num[3];
-		strcpy_s(buf, ID_MAXSIZE, "L");
-		_itoa_s(literalNumber++, num, 10);
-		strcat(buf, num);
+		char num[10];
+		strcpy_s(buf, SCOPED_ID_MAXSIZE, "L");
+		_itoa_s(literalNumber++, num, 10, 10);
+		strcat_s(buf, SCOPED_ID_MAXSIZE, num);
 		return buf;
 	}
 
@@ -151,8 +152,12 @@ namespace Lex
 				Log::WriteError(log.stream, Error::geterrorin(313, line, 0));
 				lex_ok = false;
 			}
-			// Убрана проверка для STR
-			strcpy_s(itentry->id, getNextLiteralName());
+			if (itentry->iddatatype == IT::IDDATATYPE::STR && strlen(id) > STR_MAXSIZE)
+			{
+				Log::WriteError(log.stream, Error::geterrorin(312, line, 0));
+				lex_ok = false;
+			}
+			strcpy_s(itentry->id, SCOPED_ID_MAXSIZE, getNextLiteralName());
 			itentry->idtype = IT::IDTYPE::L;
 		}
 		else
@@ -162,8 +167,12 @@ namespace Lex
 			case IT::IDDATATYPE::INT:
 				itentry->value.vint = TI_INT_DEFAULT;
 				break;
-			case IT::IDDATATYPE::CHAR:
-				itentry->value.vsymbol = TI_CHAR_DEFAULT;
+			case IT::IDDATATYPE::SYM:
+				itentry->value.symbol = TI_SYMBOL_DEFAULT;
+				break;
+			case IT::IDDATATYPE::STR:
+				itentry->value.vstr.len = 0;
+				memset(itentry->value.vstr.str, 0, STR_MAXSIZE);
 				break;
 			}
 
@@ -171,14 +180,6 @@ namespace Lex
 			{
 				switch (getStandFunction(id))
 				{
-				case IT::STDFNC::F_RANDOM:
-					itentry->idtype = IT::IDTYPE::S;
-					itentry->iddatatype = IT::IDDATATYPE::INT;
-					itentry->value.params.count = RANDOM_PARAMS_CNT;
-					itentry->value.params.types = new IT::IDDATATYPE[RANDOM_PARAMS_CNT];
-					for (int k = 0; k < RANDOM_PARAMS_CNT; k++)
-						itentry->value.params.types[k] = IT::RANDOM_PARAMS[k];
-					break;
 				case IT::STDFNC::F_COMPARE:
 					itentry->idtype = IT::IDTYPE::S;
 					itentry->iddatatype = IT::IDDATATYPE::INT;
@@ -198,7 +199,7 @@ namespace Lex
 				itentry->idtype = IT::IDTYPE::V;
 
 			memset(itentry->id, '\0', SCOPED_ID_MAXSIZE);
-			strncat(itentry->id, id, SCOPED_ID_MAXSIZE);
+			strncat_s(itentry->id, SCOPED_ID_MAXSIZE, id, _TRUNCATE);
 		}
 
 		// Проверки ошибок
@@ -274,11 +275,11 @@ namespace Lex
 							idtype = nullptr;
 
 						if (!isFunc && !scopes.empty())
-							strncpy_s(id, scopes.top(), ID_MAXSIZE);
-						strncat(id, curword, ID_MAXSIZE);
+							strncpy_s(id, STR_MAXSIZE, scopes.top(), ID_MAXSIZE);
+						strncat_s(id, STR_MAXSIZE, curword, _TRUNCATE);
 
 						if (isLiteral(curword))
-							strcpy_s(id, curword);
+							strcpy_s(id, STR_MAXSIZE, curword);
 
 						IT::Entry* itentry = getEntry(tables, lexema, id, idtype, isParam, isFunc, log, curline, lex_ok);
 						if (itentry != nullptr)

@@ -11,15 +11,16 @@
 #define	LEX_RETURN		 'e'	// return
 #define	LEX_TYPE		 'n'	// type
 #define	LEX_WRITE		 'o'	// write
+#define	LEX_WRITELINE    '^'    // writeline
 #define	LEX_REPEAT		 'c'	// repeat
 #define	LEX_TIMES		 'x'	// times
 #define	LEX_IS			 '?'	// is
 #define	LEX_TRUE		 'r'	// true
 #define	LEX_FALSE		 'w'	// false
-#define	LEX_DO			 'd'	// do
-#define	LEX_END			 'z'	// end
+#define LEX_DO           'd'    // do (ДОБАВЛЕНО)
+#define LEX_END          'z'    // end
 #define	LEX_COMPARE		 'C'	// compare
-#define	LEX_RANDOM		 'R'	// random
+#define LEX_LENGTH       'L'    // length
 
 // Разделители
 #define	LEX_SEPARATOR	 ';'	// разделитель инструкций
@@ -40,10 +41,14 @@
 
 // Операторы сравнения
 #define LEX_EQUAL		 '='	// присваивание
-#define LEX_EQUALS		 '&'	// проверка на равенство (==)
-#define LEX_NOTEQUALS	 '!'	// проверка на неравенство (!=)
+#define LEX_EQUALS		 '&'	// проверка на равенство
+#define LEX_NOTEQUALS	 '!'	// проверка на неравенство
 #define LEX_MORE		 '>'	// проверка на больше
 #define LEX_LESS		 '<'	// проверка на меньше
+
+// Специальные символы для ПОЛИЗ
+#define LEX_SUBST        '@'    // вызов функции в ПОЛИЗ
+#define LEX_TILDA        '~'    // унарный минус в ПОЛИЗ
 
 #define	LEXEMA_FIXSIZE   1	    // размер лексемы
 #define	LT_MAXSIZE		 4096	// максимальное количество строк в ТЛ

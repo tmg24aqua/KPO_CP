@@ -51,6 +51,21 @@
     <ClInclude Include="Rule.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
+    <ClInclude Include="PolishNotation.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Generator.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="ENV2025_Lib.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="MFST.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Semantic.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="In.cpp">
@@ -81,6 +96,21 @@
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="Greibach.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="PolishNotation.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Generator.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="MFST.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="ENV-2025.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Semantic.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>

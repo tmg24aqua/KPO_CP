@@ -36,7 +36,7 @@ namespace GRB
 			char* b,				// буфер
 			short nchain			// номер цепочки (правой части) в правиле
 		);
-		short Rule::getNextChain(	// получить следующую за j подходящую цепочку, вернуть её номер или -1
+		short getNextChain(			// ИСПРАВЛЕНО: убрано Rule::
 			GRBALPHABET t,			// первый символ цепочки
 			Rule::Chain& pchain,	// возвращаемая цепочка
 			short j					// номер цепочки
