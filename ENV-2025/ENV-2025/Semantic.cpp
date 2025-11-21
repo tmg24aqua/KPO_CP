@@ -1,17 +1,33 @@
+// Semantic.cpp - Реализация семантического анализатора
+//
+// Семантический анализатор проверяет семантические правила языка ENV-2025:
+// - Соответствие типов данных в операциях
+// - Правильность использования функций (количество и типы параметров)
+// - Проверка деления на ноль
+// - Корректность операций с типами данных
+// - Проверка возвращаемых значений функций
+//
+// Семантический анализ выполняется после синтаксического анализа,
+// так как требует полной информации о структуре программы
+
 #include "pch.h"
 
 namespace Semantic
 {
+    // Основная функция семантического анализа
+    // Проходит по таблице лексем и проверяет семантические правила
     bool semanticsCheck(Lex::LEX& tables, Log::LOG& log)
     {
         bool sem_ok = true;
 
+        // Проход по всем лексемам программы
         for (int i = 0; i < tables.lextable.size; i++)
         {
             switch (tables.lextable.table[i].lexema)
             {
             case LEX_TYPE:
             {
+                // Проверка: после ключевого слова type должен следовать тип данных
                 if (i + 1 >= tables.lextable.size || tables.lextable.table[i + 1].lexema != LEX_ID_TYPE)
                 {
                     sem_ok = false;
@@ -20,7 +36,7 @@ namespace Semantic
                 break;
             }
 
-            case LEX_EQUAL:
+            case LEX_EQUAL:  // Операция присваивания
             {
                 if (i > 0 && tables.lextable.table[i - 1].idxTI != TI_NULLIDX)
                 {
@@ -56,12 +72,14 @@ namespace Semantic
                 break;
             }
 
-            case LEX_DIRSLASH:
-            case LEX_PROCENT:
+            case LEX_DIRSLASH:  // Деление
+            case LEX_PROCENT:   // Остаток от деления
             {
+                // Проверка деления на ноль
                 if (i + 1 < tables.lextable.size && tables.lextable.table[i + 1].idxTI != TI_NULLIDX)
                 {
                     IT::Entry& rightOperand = tables.idtable.table[tables.lextable.table[i + 1].idxTI];
+                    // Если правый операнд - целое число, равное нулю
                     if (rightOperand.iddatatype == IT::INT && rightOperand.value.vint == 0)
                     {
                         Log::WriteError(log.stream, Error::geterrorin(318, tables.lextable.table[i].sn, 0));

@@ -1,19 +1,28 @@
-#pragma once
-#define PARM_IN L"-in:"					//ключ для файла исходного кода
-#define PARM_OUT L"-out:"				//ключ для файла объектного кода
-#define PARM_LOG L"-log:"				//ключ для файла журнала
-#define PARM_MAX_SIZE 300				//максимальная длина строки параметра
-#define PARM_OUT_DEFAULT_EXT L".asm"//расширение файла объектного кода по умолчанию
-#define PARM_LOG_DEFAULT_EXT L".log"	//расширение файла протокола по умолчанию
+// Parm.h - Обработка параметров командной строки
+//
+// Модуль обрабатывает параметры командной строки компилятора:
+// -in:файл - исходный файл программы на языке ENV-2025
+// -out:файл - выходной файл с ассемблерным кодом (по умолчанию .asm)
+// -log:файл - файл протокола работы компилятора (по умолчанию .log)
 
-namespace Parm				//обработка входных параметров
+#pragma once
+#define PARM_IN L"-in:"					// Ключ для файла исходного кода
+#define PARM_OUT L"-out:"				// Ключ для файла объектного кода
+#define PARM_LOG L"-log:"				// Ключ для файла журнала
+#define PARM_MAX_SIZE 300				// Максимальная длина строки параметра
+#define PARM_OUT_DEFAULT_EXT L".asm"		// Расширение файла объектного кода по умолчанию
+#define PARM_LOG_DEFAULT_EXT L".log"	// Расширение файла протокола по умолчанию
+
+namespace Parm				// Обработка входных параметров
 {
-	struct PARM				//входные параметры
+	// Структура входных параметров компилятора
+	struct PARM
 	{
-		wchar_t in[PARM_MAX_SIZE];		//-in:	имя файла исходного кода
-		wchar_t out[PARM_MAX_SIZE];		//-out:	имя файла объектного кода
-		wchar_t log[PARM_MAX_SIZE];		//-log:	имя файла протокола
+		wchar_t in[PARM_MAX_SIZE];		// -in: имя файла исходного кода
+		wchar_t out[PARM_MAX_SIZE];		// -out: имя файла объектного кода
+		wchar_t log[PARM_MAX_SIZE];		// -log: имя файла протокола
 	};
 
-	PARM getparm(int argc, _TCHAR* argv[]);	//сформировать struct PARM на основе парметров функции main
+	// Сформировать структуру PARM на основе параметров функции main
+	PARM getparm(int argc, _TCHAR* argv[]);
 }

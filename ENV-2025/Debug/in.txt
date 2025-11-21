@@ -1,5 +1,61 @@
-integer function string_compare(char str1, char str2)
-    is str1 == str2
+integer function add(integer a, integer b)
+    return a + b
+end
+
+integer function subtract(integer x, integer y)
+    return x - y
+end
+
+integer function multiply(integer num1, integer num2)
+    return num1 * num2
+end
+
+integer function divide(integer dividend, integer divisor)
+    is divisor & 0
+    true [
+        return 0
+    ]
+    false [
+        return dividend / divisor
+    ]
+end
+
+integer function modulo(integer value, integer mod)
+    return value % mod
+end
+
+integer function max(integer a, integer b)
+    is a > b
+    true [
+        return a
+    ]
+    false [
+        return b
+    ]
+end
+
+integer function min(integer first, integer second)
+    is first < second
+    true [
+        return first
+    ]
+    false [
+        return second
+    ]
+end
+
+integer function power(integer base, integer exponent)
+    type integer result = 1
+    type integer i = 1
+    repeat i times exponent [
+        result = result * base
+        i = i + 1
+    ]
+    return result
+end
+
+integer function isEven(integer number)
+    is number % 2 & 0
     true [
         return 1
     ]
@@ -8,94 +64,219 @@ integer function string_compare(char str1, char str2)
     ]
 end
 
-integer function calculate_power(integer base, integer exponent)
+integer function factorial(integer n)
     type integer result = 1
-    type integer i = 1
-    
-    repeat exponent times [
-        result = result * base
+    type integer counter = 1
+    repeat counter times n [
+        result = result * counter
+        counter = counter + 1
     ]
-    
     return result
 end
 
-main
-{
-    write "=== ÄÅÌÎÍÑÒĞÀÖÈß ÖÅËÎ×ÈÑËÅÍÍÛÕ ÎÏÅĞÀÖÈÉ ==="
-    writeline ""
+integer function cmpStrs(char str1, char str2)
+    return compare(str1, str2)
+end
+
+integer function getStrLen(symbol text)
+    return length(text)
+end
+
+integer function calculate(integer x, integer y, integer z)
+    type integer sum = x + y + z
+    type integer product = x * y * z
+    type integer average = sum / 3
+    return average
+end
+
+integer function strOps(symbol str1, symbol str2)
+    type integer len1 = length(str1)
+    type integer len2 = length(str2)
+    type integer totalLen = len1 + len2
+    return totalLen
+end
+
+integer function chkEqu(char str1, char str2)
+    return compare(str1, str2)
+end
+
+main {
+    type integer num1 = 10
+    type integer num2 = 5
+    type integer num3 = 3
+    type integer result
     
-    type integer a = 0b1101
-    type integer b = 0x5
+    result = add(num1, num2)
+    writeline result
     
-    write "a (äâîè÷íîå 0b1101) = "
-    writeline a
-    write "b (øåñòíàäöàòåğè÷íîå 0x5) = "
-    writeline b
+    result = subtract(num1, num2)
+    writeline result
     
-    write "a + b = "
-    writeline a + b
-    write "a - b = "
-    writeline a - b
-    write "a * b = "
-    writeline a * b
-    write "a / b = "
-    writeline a / b
-    write "a % b = "
-    writeline a % b
+    result = multiply(num1, num2)
+    writeline result
     
-    writeline ""
-    write "=== ÄÅÌÎÍÑÒĞÀÖÈß ÖÈÊËÀ ==="
-    writeline ""
+    result = divide(num1, num2)
+    writeline result
     
-    type integer counter = 1
-    repeat 4 times [
-        write "Èòåğàöèÿ "
-        write counter
-        write ": çíà÷åíèå = "
-        writeline counter * 2
-        counter = counter + 1
-    ]
+    result = modulo(num1, num3)
+    writeline result
     
-    writeline ""
-    write "=== ÄÅÌÎÍÑÒĞÀÖÈß ÑÈÌÂÎËÜÍÛÕ ÎÏÅĞÀÖÈÉ ==="
-    writeline ""
+    result = max(num1, num2)
+    writeline result
+    
+    result = min(num1, num2)
+    writeline result
+    
+    type integer factNum = 5
+    result = factorial(factNum)
+    writeline result
+    
+    result = power(2, 8)
+    writeline result
+    
+    type integer testNum = 6
+    result = isEven(testNum)
+    writeline result
+    
+    type integer testNum2 = 7
+    result = isEven(testNum2)
+    writeline result
     
     type char char1 = 'A'
     type char char2 = 'B'
+    result = cmpStrs(char1, char2)
+    writeline result
+    
     type char char3 = 'A'
+    type char char4 = 'A'
+    result = compare(char3, char4)
+    writeline result
     
-    write "Ñèìâîë 1: "
-    writeline char1
-    write "Ñèìâîë 2: "
-    writeline char2
-    write "Ñèìâîë 3: "
-    writeline char3
+    type char char5 = 'X'
+    type char char6 = 'Y'
+    result = compare(char5, char6)
+    writeline result
     
-    type integer compare_result1 = string_compare(char1, char2)
-    write "Ñğàâíåíèå A è B: "
-    writeline compare_result1
+    type symbol text = "Hello"
+    result = getStrLen(text)
+    writeline result
     
-    type integer compare_result2 = string_compare(char1, char3)
-    write "Ñğàâíåíèå A è A: "
-    writeline compare_result2
+    type symbol text2 = "World"
+    result = length(text2)
+    writeline result
     
-    writeline ""
-    write "=== ÄÅÌÎÍÑÒĞÀÖÈß ÏĞÎÈÇÂÎËÜÍÎÉ ÔÓÍÊÖÈÈ ==="
-    writeline ""
+    type symbol text3 = "ENV-2025"
+    result = length(text3)
+    writeline result
     
-    type integer power_result = calculate_power(2, 4)
-    write "2 â ñòåïåíè 4 = "
-    writeline power_result
+    type char tChar7 = 'T'
+    type char tChar8 = 'T'
+    result = compare(tChar7, tChar8)
+    writeline result
     
-    writeline ""
-    write "=== ÄÅÌÎÍÑÒĞÀÖÈß ËÎÃÈ×ÅÑÊÈÕ ËÈÒÅĞÀËÎÂ ==="
-    writeline ""
+    type char tChar9 = 'H'
+    type char tCh10 = 'W'
+    result = compare(tChar9, tCh10)
+    writeline result
     
-    write "Ëîãè÷åñêèå çíà÷åíèÿ: "
-    write true
-    write " "
-    write false
-    writeline ""
+    result = strOps("ABC", "DEF")
+    writeline result
     
-    return 0
+    result = calculate(10, 20, 30)
+    writeline result
+    
+    type integer a = 15
+    type integer b = 25
+    type integer c = 35
+    result = calculate(a, b, c)
+    writeline result
+    
+    type integer x = 0x1A
+    type integer y = 0b1010
+    writeline x
+    writeline y
+    
+    type integer counter = 1
+    repeat counter times 5 [
+        writeline counter
+        counter = counter + 1
+    ]
+    
+    type integer value = 10
+    is value > 5
+    true [
+        writeline true
+    ]
+    false [
+        writeline false
+    ]
+    
+    is value < 5
+    true [
+        writeline true
+    ]
+    false [
+        writeline false
+    ]
+    
+    is value & 10
+    true [
+        writeline true
+    ]
+    false [
+        writeline false
+    ]
+    
+    is value ! 10
+    true [
+        writeline true
+    ]
+    false [
+        writeline false
+    ]
+    
+    type integer expr1 = (10 + 5) * 2
+    type integer expr2 = 20 / 2 + 3
+    type integer expr3 = 100 % 7
+    writeline expr1
+    writeline expr2
+    writeline expr3
+    
+    type integer complex = add(multiply(2, 3), subtract(10, 4))
+    writeline complex
+    
+    type symbol msg1 = "Compare test:"
+    writeline msg1
+    
+    type char cmpCh1 = 'S'
+    type char cmpCh2 = 'S'
+    result = compare(cmpCh1, cmpCh2)
+    writeline result
+    
+    type char cmpCh3 = 'D'
+    type char cmpCh4 = 'S'
+    result = compare(cmpCh3, cmpCh4)
+    writeline result
+    
+    type symbol testStr = "Length test"
+    result = length(testStr)
+    writeline result
+    
+    type symbol emptyStr = ""
+    result = length(emptyStr)
+    writeline result
+    
+    type symbol longStr = "This is a longer string for testing"
+    result = length(longStr)
+    writeline result
+    
+    type char tChar1 = 'Z'
+    type char tChar2 = 'Z'
+    result = chkEqu(tChar1, tChar2)
+    writeline result
+    
+    type char tChar3 = 'M'
+    type char tChar4 = 'N'
+    result = chkEqu(tChar3, tChar4)
+    writeline result
 }

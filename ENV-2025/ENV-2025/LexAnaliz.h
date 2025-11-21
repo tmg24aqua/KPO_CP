@@ -1,8 +1,19 @@
+// LexAnaliz.h - Лексический анализатор
+//
+// Лексический анализатор разбирает исходный код на токены (лексемы).
+// Использует конечные автоматы (FST) для распознавания различных типов лексем.
+//
+// Основные функции:
+// - analyze(): основной анализ исходного кода
+// - getEntry(): создание записи в таблице идентификаторов
+// - Проверка ключевых слов, стандартных функций, типов данных
+// - Распознавание литералов (числа, строки, символы, логические значения)
+
 #pragma once
 #include "pch.h"
 
-#define TYPE_INTEGER	"integer"
-#define TYPE_SYMBOL	    "symbol"
+#define TYPE_INTEGER	"integer"	// Тип данных: целое число
+#define TYPE_SYMBOL	    "symbol"	// Тип данных: символ
 #define COMPARE_FUNC	"compare"
 #define LENGTH_FUNC		"length"
 #define MAIN_FUNC		"main"
