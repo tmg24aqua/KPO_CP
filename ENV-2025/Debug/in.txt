@@ -1,0 +1,162 @@
+integer function factorial(integer n)
+{
+	type integer result = 1;
+	type integer i = 1;
+	repeat n times do
+	[
+		result = result * i;
+		i = i + 1;
+	]
+	return result;
+}
+main
+{
+	writeline "=== Testing Function ===";
+	type integer num = 5;
+	type integer fact = factorial(num);
+	write "factorial(5) = ";
+	writeline fact;
+
+	type integer x = '0x1A';
+	write "x (hex) = ";
+	writeline x;
+	
+	type integer q = '-0x1B';
+	write "q (negative hex) = ";
+	writeline q;
+	
+	type integer y = '0b1010';
+	write "y (binary) = ";
+	writeline y;
+	
+	type integer z = '-0b1101';
+	write "z (negative binary) = ";
+	writeline z;
+	
+	type integer a = true;
+	write "a (boolean true) = ";
+	writeline a;
+	
+	type integer b = false;
+	write "b (boolean false) = ";
+	writeline b;
+
+	type integer c = yes;
+	write "c (boolean yes) = ";
+	writeline c;
+	
+	type integer d = no;
+	write "d (boolean no) = ";
+	writeline d;
+	
+	type integer e = 1;
+	write "e (boolean 1) = ";
+	writeline e;
+	
+	type integer f = 0;
+	write "f (boolean 0) = ";
+	writeline f;
+
+	type integer result = x + y * 2;
+	write "result = x + y * 2 = ";
+	writeline result;
+	
+	type integer divresult = 20 / 3;
+	write "divresult = 20 / 3 = ";
+	writeline divresult;
+	
+	type integer modresult = 20 % 3;
+	write "modresult = 20 % 3 = ";
+	writeline modresult;
+	
+	type symbol sym = ~A~;
+	write "sym = ";
+	writeline sym;
+	
+	type string str1 = "Hello";
+	type string str2 = "World";
+	
+	write "str1 = ";
+	writeline str1;
+	write "str2 = ";
+	writeline str2;
+	
+	write "Cycle example (repeat 5 times):";
+	writeline  " ";
+	type integer i = 0;
+	
+	repeat 5 times do [
+		write "Iteration ";
+		writeline i;
+		i = i + 1;
+	]
+	
+	write "Cycle finished. Final i = ";
+	writeline i;
+	
+	writeline "=== Testing Library Functions ===";
+	
+	type integer powresult = pow(2, 3);
+	write "pow(2, 3) = 2 to power 3 = ";
+	writeline powresult;
+	
+	type integer powresult2 = pow(5, 2);
+	write "pow(5, 2) = 5 to power 2 = ";
+	writeline powresult2;
+	
+	type integer powresult3 = pow(10, 0);
+	write "pow(10, 0) = 10 to power 0 = ";
+	writeline powresult3;
+	
+	writeline " ";
+	write "Testing random function:";
+	type integer rand1 = random(1, 10);
+	write "random(1, 10) = ";
+	writeline rand1;
+	
+	type integer rand2 = random(50, 100);
+	write "random(50, 100) = ";
+	writeline rand2;
+	
+	writeline " ";
+	write "Testing lenght function:";
+	type string teststr = "Hello World";
+	type integer strlen = lenght(teststr);
+	write "lenght(teststr) where teststr = ";
+	write teststr;
+	write " = ";
+	writeline strlen;
+	
+	type integer strlen1 = lenght(str1);
+	write "lenght(str1) where str1 = ";
+	write str1;
+	write " = ";
+	writeline strlen1;
+	
+	type integer strlen2 = lenght(str2);
+	write "lenght(str2) where str2 = ";
+	write str2;
+	write " = ";
+	writeline strlen2;
+	
+	writeline " ";
+	write "Testing compare function:";
+	type integer cmp1 = compare(str1, str2);
+	write "compare(str1, str2) = compare(Hello, World) = ";
+	writeline cmp1;
+	
+	type string str3 = "Hello";
+	type integer cmp2 = compare(str1, str3);
+	write "compare(str1, str3) = compare(Hello, Hello) = ";
+	writeline cmp2;
+	
+	type string str4 = "XYZ";
+	type string str5 = "ABC";
+	type integer cmp3 = compare(str4, str5);
+	write "compare(str4, str5) = compare(XYZ, ABC) = ";
+	writeline cmp3;
+	
+	writeline " ";
+	writeline "=== All tests completed! ===";
+	writeline "Program finished!";
+}
