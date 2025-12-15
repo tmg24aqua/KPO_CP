@@ -39,95 +39,95 @@
 	<< std::endl;
 
 
-typedef std::stack<short> MFSTSTACK;		// стек автомата
+typedef std::stack<short> MFSTSTACK;		
 
 namespace MFST
 {
-	struct MfstState				// состояние автомата (для сохранения)
+	struct MfstState				
 	{
-		short lenta_position;			// позиция на ленте
-		short nrule;					// номер текущего правила
-		short nrulechain;				// номер текущей цепочки, текущего правила
-		MFSTSTACK st;					// стек автомата
+		short lenta_position;			
+		short nrule;					
+		short nrulechain;				
+		MFSTSTACK st;					
 		MfstState();
 		MfstState(
-			short pposition,			// позиция на ленте
-			MFSTSTACK pst,				// стек автомата
-			short pnrulechain			// номер текущей цепочки, текущего правила
+			short pposition,			
+			MFSTSTACK pst,				
+			short pnrulechain			
 		);
 		MfstState(
-			short pposition,			// позиция на ленте
-			MFSTSTACK pst,				// стек автомата
-			short pnrule,				// номер текущего правила
-			short pnrulechain			// номер текущей цепочки, текущего правила
+			short pposition,			
+			MFSTSTACK pst,				
+			short pnrule,				
+			short pnrulechain			
 		);
 	};
 
-	struct Mfst				// магазинный автомат
+	struct Mfst				
 	{
-		enum RC_STEP {			// код возвтара функции step
-			NS_OK,				// найдено правило и цепочка, цепочка записана в стек
-			NS_NORULE,			// не найдено правило грамматики (ошибка в грамматике)
-			NS_NORULECHAIN,		// не найдена подходящая цепочка правила (ошибка в исходном коде)
-			NS_ERROR,			// неизвестный нетерминальный символ грамматики
-			TS_OK,				// тек. символ ленты == вершине стека, продвинулась лента, pop стека
-			TS_NOK,				// тек. символ ленты != вершине стека, восстановлено состояние
-			LENTA_END,			// текущая позиция ленты >= lenta_size
-			SURPRISE			// неожиданный код возврата (ошибка в step)
+		enum RC_STEP {			
+			NS_OK,				
+			NS_NORULE,			
+			NS_NORULECHAIN,		
+			NS_ERROR,			
+			TS_OK,				
+			TS_NOK,				
+			LENTA_END,			
+			SURPRISE			
 		};
 
-		struct MfstDiagnosis	// диагностика
+		struct MfstDiagnosis	
 		{
-			short lenta_position;		// позиция на ленте
-			RC_STEP rc_step;			// код завершения шага
-			short nrule;				// номер правила
-			short nrule_chain;			// номер цепочки правила
+			short lenta_position;		
+			RC_STEP rc_step;			
+			short nrule;				
+			short nrule_chain;			
 			MfstDiagnosis();
 			MfstDiagnosis(
-				short plenta_position,	// позиция на ленте
-				RC_STEP prt_step,		// код завершения шага
-				short pnrule,			// номер правила
-				short pnrule_chain		// номер цепочки правила
+				short plenta_position,	
+				RC_STEP prt_step,		
+				short pnrule,			
+				short pnrule_chain		
 			);
-		} diagnosis[MFST_DIAGN_NUMBER];		// последние самые глубокие сообщения
+		} diagnosis[MFST_DIAGN_NUMBER];		
 
-		GRBALPHABET* lenta;				// перекодированная (TS/NS) лента (из LEX)
-		short lenta_position;			// текущая позиция на ленте
-		short nrule;					// номер текущего правила
-		short nrulechain;				// номер текущей цепочки, текущего правила
-		short lenta_size;				// размер ленты
-		GRB::Greibach grebach;			// грамматика Грейбах
-		Lex::LEX lex;						// результат работы лексического анализатора
-		MFSTSTACK st;					// стек автомата
-		std::stack<MfstState> storestate;	// стек для сохранения состояний 
+		GRBALPHABET* lenta;				
+		short lenta_position;			
+		short nrule;					
+		short nrulechain;				
+		short lenta_size;				
+		GRB::Greibach grebach;			
+		Lex::LEX lex;						
+		MFSTSTACK st;					
+		std::stack<MfstState> storestate;	
 		Mfst();
 		Mfst(
-			Lex::LEX plex,			//результат работы лексического анализатора
-			GRB::Greibach pgrebach		//грамматика Грейбах
+			Lex::LEX plex,			
+			GRB::Greibach pgrebach		
 		);
-		char* getCSt(char* buf);		// получить содержимое стека
-		char* getCLenta(char* buf, short pos, short n = 25);	// лента: n символов с pos
-		const char* getDiagnosis(short n, char* buf);		// получить n-ю строку диагностики или 0х00
-		bool savestate(const Log::LOG &log);				// сохранить состояние автомата
-		bool reststate(const Log::LOG &log);			// восстановить состояние автомата
-		bool push_chain(				// поместить цепочку правила в стек
-			GRB::Rule::Chain chain		// цепочка правила
+		char* getCSt(char* buf);		
+		char* getCLenta(char* buf, short pos, short n = 25);	
+		const char* getDiagnosis(short n, char* buf);		
+		bool savestate(const Log::LOG &log);				
+		bool reststate(const Log::LOG &log);			
+		bool push_chain(				
+			GRB::Rule::Chain chain		
 		);
-		RC_STEP step(const Log::LOG &log);					// выполнить шаг автомата
-		bool start(const Log::LOG &log);					// запустить автомат
+		RC_STEP step(const Log::LOG &log);					
+		bool start(const Log::LOG &log);					
 		bool savediagnosis(
-			RC_STEP pprc_step			// код завершения шага
+			RC_STEP pprc_step			
 		);
-		void printrules(const Log::LOG &log);				// вывести последовательность правил
+		void printrules(const Log::LOG &log);				
 
-		struct Deducation		// вывод
+		struct Deducation		
 		{
-			short size;			// количество шагов в выводе
-			short* nrules;		// номера правил грамматики
-			short* nrulechains;	// номера цепочек правик грамматики (nrules)
+			short size;			
+			short* nrules;		
+			short* nrulechains;	
 			Deducation() { size = 0; nrules = 0; nrulechains = 0; };
 		} deducation;
 
-		bool savededucation();	// сохранить дерево вывода
+		bool savededucation();
 	};
 }

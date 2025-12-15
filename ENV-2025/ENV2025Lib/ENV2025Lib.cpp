@@ -4,8 +4,6 @@
 #include <ctime>
 
 extern "C" {
-
-    // Функция сравнения строк для ENV-2025
     int __stdcall compare(char* str1, char* str2)
     {
         if (str1 == nullptr || str2 == nullptr)
@@ -16,7 +14,6 @@ extern "C" {
         return 0;
     }
 
-    // Функция вычисления длины строки для ENV-2025
     int __stdcall lenght(char* str)
     {
         if (str == nullptr)
@@ -24,14 +21,12 @@ extern "C" {
         return strlen(str);
     }
 
-    // Вывод целого числа
     int __stdcall outnum(int value)
     {
         std::cout << value;
         return 0;
     }
 
-    // Вывод строки
     int __stdcall outstr(char* ptr)
     {
         if (ptr == nullptr)
@@ -42,14 +37,12 @@ extern "C" {
         return 0;
     }
 
-    // Вывод целого числа с переводом строки
     int __stdcall outnumline(int value)
     {
         std::cout << value << std::endl;
         return 0;
     }
 
-    // Вывод строки с переводом строки
     int __stdcall outstrline(char* ptr)
     {
         if (ptr == nullptr)
@@ -64,14 +57,12 @@ extern "C" {
         return 0;
     }
 
-    // Ожидание нажатия клавиши
     int __stdcall system_pause()
     {
         system("pause");
         return 0;
     }
 
-    // Генерация случайного числа от min до max
     int __stdcall random(int min, int max)
     {
         static bool initialized = false;
@@ -84,13 +75,12 @@ extern "C" {
         return min + (rand() % (max - min + 1));
     }
 
-    // Возведение в степень
     int __stdcall power(int base, int exponent)
     {
         if (exponent == 0)
             return 1;
         if (exponent < 0)
-            return 0; // Для целых чисел отрицательные степени не поддерживаются
+            return 0; 
         
         int result = 1;
         for (int i = 0; i < exponent; i++)
