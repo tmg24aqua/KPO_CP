@@ -28,7 +28,7 @@ ExitProcess PROTO :DWORD
  null_division BYTE 'ERROR: DIVISION BY ZERO', 0
  overflow BYTE 'ERROR: VARIABLE OVERFLOW', 0 
 	L1 SWORD 1
-	L2 BYTE '=== Testing Function ===', 0
+	L2 BYTE ' Testing Function ', 0
 	L3 SWORD 5
 	L4 BYTE 'factorial(5) = ', 0
 	L5 SWORD 26
@@ -62,7 +62,7 @@ ExitProcess PROTO :DWORD
 	L33 BYTE ' ', 0
 	L34 BYTE 'Iteration ', 0
 	L35 BYTE 'Cycle finished. Final i = ', 0
-	L36 BYTE '=== Testing Library Functions ===', 0
+	L36 BYTE ' Testing Library Functions ', 0
 	L37 BYTE 'pow(2, 3) = 2 to power 3 = ', 0
 	L38 BYTE 'pow(5, 2) = 5 to power 2 = ', 0
 	L39 BYTE 'pow(10, 0) = 10 to power 0 = ', 0
@@ -83,7 +83,7 @@ ExitProcess PROTO :DWORD
 	L54 BYTE 'XYZ', 0
 	L55 BYTE 'ABC', 0
 	L56 BYTE 'compare(str4, str5) = compare(XYZ, ABC) = ', 0
-	L57 BYTE '=== All tests completed! ===', 0
+	L57 BYTE ' All tests completed! ', 0
 	L58 BYTE 'Program finished!', 0
 .data
 	_factorialresult SWORD 0

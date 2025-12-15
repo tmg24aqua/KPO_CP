@@ -4,27 +4,27 @@
 #define TS(n)	GRB::Rule::Chain::T(n)
 #define ISNS(n)	GRB::Rule::Chain::isN(n)
 int FST_TRACE_n = -1;
-char rbuf[205],		// для правила
-sbuf[205],		// для стека
-lbuf[1024];	// для ленты
+char rbuf[205],		
+sbuf[205],		
+lbuf[1024];	
 
 namespace MFST
 {
-	MfstState::MfstState() //конструктор
+	MfstState::MfstState() 
 	{
 		lenta_position = 0;
 		nrule = -1;
 		nrulechain = -1;
 	};
 
-	MfstState::MfstState(short pposition, MFSTSTACK pst, short pnrulechain) //конструктор
+	MfstState::MfstState(short pposition, MFSTSTACK pst, short pnrulechain) 
 	{
 		lenta_position = pposition;
 		st = pst;
 		nrulechain = pnrulechain;
 	};
 
-	MfstState::MfstState(short pposition, MFSTSTACK pst, short pnrule, short pnrulechain)		// конструктор запоминаем правило
+	MfstState::MfstState(short pposition, MFSTSTACK pst, short pnrule, short pnrulechain)		
 	{
 		lenta_position = pposition;
 		st = pst;
@@ -32,7 +32,7 @@ namespace MFST
 		nrulechain = pnrulechain;
 	};
 
-	Mfst::MfstDiagnosis::MfstDiagnosis() //конструктор
+	Mfst::MfstDiagnosis::MfstDiagnosis()
 	{
 		lenta_position = -1;
 		rc_step = SURPRISE;
@@ -40,7 +40,7 @@ namespace MFST
 		nrule_chain = -1;
 	};
 
-	Mfst::MfstDiagnosis::MfstDiagnosis(short plenta_position, RC_STEP prc_step, short pnrule, short pnrule_chain) //конструктор
+	Mfst::MfstDiagnosis::MfstDiagnosis(short plenta_position, RC_STEP prc_step, short pnrule, short pnrule_chain)
 	{
 		lenta_position = plenta_position;
 		rc_step = prc_step;
@@ -48,60 +48,60 @@ namespace MFST
 		nrule_chain = pnrule_chain;
 	};
 
-	Mfst::Mfst() { lenta = 0; lenta_size = lenta_position = 0; }; //конструктор
-	Mfst::Mfst(Lex::LEX plex, GRB::Greibach pgrebach) //конструктор
+	Mfst::Mfst() { lenta = 0; lenta_size = lenta_position = 0; }; 
+	Mfst::Mfst(Lex::LEX plex, GRB::Greibach pgrebach) 
 	{
 		grebach = pgrebach;
 		lex = plex;
-		lenta = new short[lenta_size = lex.lextable.size];		// массив для ленты, состоящией из символов таблицы лексем
+		lenta = new short[lenta_size = lex.lextable.size];		
 		for (int k = 0; k < lenta_size; k++)
-			lenta[k] = TS(lex.lextable.table[k].lexema);	// заполнение массива терминалами
+			lenta[k] = TS(lex.lextable.table[k].lexema);	
 		lenta_position = 0;
-		st.push(grebach.stbottomT);		// дно стека в стек
-		st.push(grebach.startN);		// стартовый символ в стек
+		st.push(grebach.stbottomT);		
+		st.push(grebach.startN);		
 		nrulechain = -1;
 	};
 
-	Mfst::RC_STEP Mfst::step(const Log::LOG& log)		// шаг автомата
+	Mfst::RC_STEP Mfst::step(const Log::LOG& log)	
 	{
 		RC_STEP rc = SURPRISE;
-		if (lenta_position < lenta_size)	// если лента не закончилась
+		if (lenta_position < lenta_size)	
 		{
-			if (ISNS(st.top()))			// если на вершине стеке нетерминал
+			if (ISNS(st.top()))			
 			{
 				GRB::Rule rule;
-				if ((nrule = grebach.getRule(st.top(), rule)) >= 0)		// если найдено правило по нетерминалу на вершине стека... заполняем номер текущего правила
+				if ((nrule = grebach.getRule(st.top(), rule)) >= 0)	
 				{
 					GRB::Rule::Chain chain;
-					if ((nrulechain = rule.getNextChain(lenta[lenta_position], chain, nrulechain + 1)) >= 0)	// получаем следующую цепочку по терминалу из ленты и заполяем цепочку
+					if ((nrulechain = rule.getNextChain(lenta[lenta_position], chain, nrulechain + 1)) >= 0)	
 					{
-						MFST_TRACE1(log)			// вывод ++номера шага автомата, правила, ленты и стека
-							savestate(log);		// сохраняем состояние
-						st.pop();			// извлекаем из стека символ
-						push_chain(chain);	// помещаем цепочку в стек
-						rc = NS_OK;			// найдено правило и цепочка, цепочка записана в стек
-						MFST_TRACE2(log)			// вывод номера шага автомата, ленты и стека
+						MFST_TRACE1(log)		
+							savestate(log);	
+						st.pop();			
+						push_chain(chain);	
+						rc = NS_OK;			
+						MFST_TRACE2(log)		
 					}
-					else		// не найдена подходящая цепочка
+					else		
 					{
 						MFST_TRACE4(log, "TNS_NORULECHAIN/NS_NORULE")
 							savediagnosis(NS_NORULECHAIN);
-						rc = reststate(log) ? NS_NORULECHAIN : NS_NORULE;	// восстановить состояние автомата
+						rc = reststate(log) ? NS_NORULECHAIN : NS_NORULE;	
 					};
 				}
-				else rc = NS_ERROR;		// неизвестный нетерминал
+				else rc = NS_ERROR;		
 			}
-			else if ((st.top() == lenta[lenta_position]))	// если на вершине стека терминал и он совпадает 
+			else if ((st.top() == lenta[lenta_position]))
 			{
-				lenta_position++;	// сдвигаем ленту
+				lenta_position++;
 				st.pop();
 				nrulechain = -1;
 				rc = TS_OK;
-				MFST_TRACE3(log)		// вывод ++номера шага автомата, ленты и стека
+				MFST_TRACE3(log)
 			}
 			else
 			{
-				MFST_TRACE4(log, "TS_NOK/NS_NORULECHAIN")		// вывод ++номера шага автомата и сообщения
+				MFST_TRACE4(log, "TS_NOK/NS_NORULECHAIN")	
 					rc = reststate(log) ? TS_NOK : NS_NORULECHAIN;
 			};
 		}
@@ -112,7 +112,7 @@ namespace MFST
 		return rc;
 	};
 
-	bool Mfst::push_chain(GRB::Rule::Chain chain) //цепочка в стек с обратной стороны
+	bool Mfst::push_chain(GRB::Rule::Chain chain) 
 	{
 		for (int k = chain.size - 1; k >= 0; k--)
 			st.push(chain.nt[k]);
@@ -122,11 +122,11 @@ namespace MFST
 	bool Mfst::savestate(const Log::LOG& log)
 	{
 		storestate.push(MfstState(lenta_position, st, nrule, nrulechain));
-		MFST_TRACE6(log, "SAVESTATE:", storestate.size());		// вывод текста и размера стека для сохранения состояний
+		MFST_TRACE6(log, "SAVESTATE:", storestate.size());		
 		return true;
 	};
 
-	bool Mfst::reststate(const Log::LOG& log) //восстановить состояние автомата
+	bool Mfst::reststate(const Log::LOG& log) 
 	{
 		bool rc = false;
 		MfstState state;
@@ -180,22 +180,18 @@ namespace MFST
 			MFST_TRACE4(log, "------>NS_NORULE")
 			* log.stream << "-------------------------------------------------------------------------------------" << std::endl;
 			
-			// ИСПРАВЛЕНИЕ: Берем позицию из диагностики (самая дальняя точка разбора)
-			// diagnosis[0] хранит информацию о месте, где парсер застрял окончательно
+
 			{
 				int lpos = diagnosis[0].lenta_position;
 				
-				// Если диагностика пуста (редкий случай), берем текущую или последнюю
 				if (lpos == -1) lpos = lenta_position;
 				
-				// Защита от выхода за границы
 				if (lpos >= lex.lextable.size) lpos = lex.lextable.size - 1;
 				if (lpos < 0) lpos = 0;
 
 				int errorLine = lex.lextable.table[lpos].sn;
 				int errorCol = lex.lextable.table[lpos].col;
 				
-				// Выводим ошибку 612 с правильными координатами
 				Log::WriteError(log.stream, Error::geterrorin(612, errorLine, errorCol));
 			}
 			

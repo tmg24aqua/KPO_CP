@@ -19,14 +19,14 @@
     IN::L, IN::H, IN::H, IN::H,  IN::H, IN::H, IN::H, IN::L,   IN::L, IN::L, IN::L, IN::L,  IN::L, IN::L, IN::L, IN::L,\
     IN::L, IN::L, IN::L, IN::L,  IN::L, IN::L, IN::L, IN::L,   IN::L, IN::L, IN::L, IN::S,  IN::O, IN::S, IN::S, IN::S,\
 	\
-                IN::I, IN::I, IN::I, IN::I,  IN::I, IN::I, IN::I, IN::I,   IN::I, IN::I, IN::I, IN::I,  IN::I, IN::I, IN::I, IN::I,\
-                IN::I, IN::I, IN::I, IN::I,  IN::I, IN::I, IN::I, IN::I,   IN::I, IN::I, IN::I, IN::I,  IN::I, IN::I, IN::I, IN::I,\
-                IN::I, IN::I, IN::I, IN::I,  IN::I, IN::I, IN::I, IN::I,   IN::I, IN::I, IN::I, IN::I,  IN::I, IN::I, IN::I, IN::I,\
-                IN::I, IN::I, IN::I, IN::I,  IN::I, IN::I, IN::I, IN::I,   IN::I, IN::I, IN::I, IN::I,  IN::I, IN::I, IN::I, IN::I,\
-                IN::I, IN::I, IN::I, IN::I,  IN::I, IN::I, IN::I, IN::I,   IN::I, IN::I, IN::I, IN::I,  IN::I, IN::I, IN::I, IN::I,\
-                IN::I, IN::I, IN::I, IN::I,  IN::I, IN::I, IN::I, IN::I,   IN::I, IN::I, IN::I, IN::I,  IN::I, IN::I, IN::I, IN::I,\
-                IN::I, IN::I, IN::I, IN::I,  IN::I, IN::I, IN::I, IN::I,   IN::I, IN::I, IN::I, IN::I,  IN::I, IN::I, IN::I, IN::I,\
-                IN::I, IN::I, IN::I, IN::I,  IN::I, IN::I, IN::I, IN::I,   IN::I, IN::I, IN::I, IN::I,  IN::I, IN::I, IN::I, IN::I \
+    IN::I, IN::I, IN::I, IN::I,  IN::I, IN::I, IN::I, IN::I,   IN::I, IN::I, IN::I, IN::I,  IN::I, IN::I, IN::I, IN::I,\
+    IN::I, IN::I, IN::I, IN::I,  IN::I, IN::I, IN::I, IN::I,   IN::I, IN::I, IN::I, IN::I,  IN::I, IN::I, IN::I, IN::I,\
+    IN::I, IN::I, IN::I, IN::I,  IN::I, IN::I, IN::I, IN::I,   IN::I, IN::I, IN::I, IN::I,  IN::I, IN::I, IN::I, IN::I,\
+    IN::I, IN::I, IN::I, IN::I,  IN::I, IN::I, IN::I, IN::I,   IN::I, IN::I, IN::I, IN::I,  IN::I, IN::I, IN::I, IN::I,\
+    IN::I, IN::I, IN::I, IN::I,  IN::I, IN::I, IN::I, IN::I,   IN::I, IN::I, IN::I, IN::I,  IN::I, IN::I, IN::I, IN::I,\
+    IN::I, IN::I, IN::I, IN::I,  IN::I, IN::I, IN::I, IN::I,   IN::I, IN::I, IN::I, IN::I,  IN::I, IN::I, IN::I, IN::I,\
+    IN::I, IN::I, IN::I, IN::I,  IN::I, IN::I, IN::I, IN::I,   IN::I, IN::I, IN::I, IN::I,  IN::I, IN::I, IN::I, IN::I,\
+    IN::I, IN::I, IN::I, IN::I,  IN::I, IN::I, IN::I, IN::I,   IN::I, IN::I, IN::I, IN::I,  IN::I, IN::I, IN::I, IN::I \
 }
 
 namespace In

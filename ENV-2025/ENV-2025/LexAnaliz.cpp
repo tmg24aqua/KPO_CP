@@ -62,13 +62,9 @@ namespace Lex
 		for (int i = 0; value[i] != '\0' && i < 255; i++)
 			lower[i] = tolower(static_cast<unsigned char>(value[i]));
 
-		if (strstr(lower, "true") || strstr(lower, "истина") || strstr(lower, "да") ||
-			strstr(lower, "yes") || strstr(lower, "1") || strstr(lower, "+") ||
-			strstr(lower, "on") || strstr(lower, "вкл"))
+		if (strstr(lower, "true") || strstr(lower, "yes") || strstr(lower, "1"))
 			return 1;
-		if (strstr(lower, "false") || strstr(lower, "ложь") || strstr(lower, "нет") ||
-			strstr(lower, "no") || strstr(lower, "0") || strstr(lower, "-") ||
-			strstr(lower, "off") || strstr(lower, "выкл"))
+		if (strstr(lower, "false") ||  strstr(lower, "no") || strstr(lower, "0"))
 			return 0;
 		return 0;
 	}
@@ -136,13 +132,11 @@ namespace Lex
 						for (int j = 0; parseValue[j] != '\0' && j < 255; j++)
 							lower[j] = tolower(parseValue[j]);
 						lower[255] = '\0';
-						if (strstr(lower, "true") || strstr(lower, "истина") || strstr(lower, "да") ||
-							strstr(lower, "yes") || strstr(lower, "1") || strstr(lower, "+") ||
-							strstr(lower, "on") || strstr(lower, "вкл"))
+						if (strstr(lower, "true") ||
+							strstr(lower, "yes") || strstr(lower, "1"))
 							temp = 1;
-						else if (strstr(lower, "false") || strstr(lower, "ложь") || strstr(lower, "нет") ||
-							strstr(lower, "no") || strstr(lower, "0") || strstr(lower, "-") ||
-							strstr(lower, "off") || strstr(lower, "выкл"))
+						else if (strstr(lower, "false") ||
+							strstr(lower, "no") || strstr(lower, "0"))
 							temp = 0;
 						else
 							temp = (short)atoi(parseValue);
@@ -211,10 +205,9 @@ namespace Lex
 			for (int i = 0; curword[i] != '\0' && i < 255; i++)
 				lower[i] = tolower(static_cast<unsigned char>(curword[i]));
 
-			if (strstr(lower, "true") || strstr(lower, "false") || strstr(lower, "истина") ||
-				strstr(lower, "ложь") || strstr(lower, "да") || strstr(lower, "нет") ||
-				strstr(lower, "yes") || strstr(lower, "no") || strstr(lower, "on") ||
-				strstr(lower, "off") || strstr(lower, "вкл") || strstr(lower, "выкл"))
+			if (strstr(lower, "true") || strstr(lower, "false") ||
+				strstr(lower, "yes") || strstr(lower, "no")
+				)
 				return IT::IDDATATYPE::INT;
 		}
 

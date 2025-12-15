@@ -11,7 +11,7 @@ integer function factorial(integer n)
 }
 main
 {
-	writeline "=== Testing Function ===";
+	writeline " Testing Function ";
 	type integer num = 5;
 	type integer fact = factorial(num);
 	write "factorial(5) = ";
@@ -94,7 +94,7 @@ main
 	write "Cycle finished. Final i = ";
 	writeline i;
 	
-	writeline "=== Testing Library Functions ===";
+	writeline " Testing Library Functions ";
 	
 	type integer powresult = pow(2, 3);
 	write "pow(2, 3) = 2 to power 3 = ";
@@ -157,6 +157,6 @@ main
 	writeline cmp3;
 	
 	writeline " ";
-	writeline "=== All tests completed! ===";
+	writeline " All tests completed! ";
 	writeline "Program finished!";
 }

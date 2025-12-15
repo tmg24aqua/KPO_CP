@@ -1,10 +1,10 @@
----- Протокол ------- Дата: 15.12.2025 02:21:54
+---- Протокол ------- Дата: 15.12.2025 23:05:14
 ---- Параметры -------
 -log: in.txt.log
 -out: in.txt.asm
 -in: in.txt
 ---- Исходные данные -----
-Количество символов: 3294
+Количество символов: 3276
 Проигнорировано:     0
 Количество строк:    162
 ------------------------------ ТАБЛИЦА ЛЕКСЕМ  ------------------------
@@ -576,7 +576,7 @@
 |   2 |      10    |   integer   variable |   _factorialresult |0
 |   3 |      12    |   integer    literal |                 L1 |1
 |   4 |      16    |   integer   variable |        _factoriali |0
-|   5 |      45    |   string     literal |                 L2 |[24]=== Testing Function ===
+|   5 |      45    |   string     literal |                 L2 |[18] Testing Function 
 |   6 |      49    |   integer   variable |            mainnum |0
 |   7 |      51    |   integer    literal |                 L3 |5
 |   8 |      55    |   integer   variable |           mainfact |0
@@ -629,7 +629,7 @@
 |  55 |     276    |   integer   variable |              maini |0
 |  56 |     286    |   string     literal |                L34 |[10]Iteration 
 |  57 |     299    |   string     literal |                L35 |[26]Cycle finished. Final i = 
-|  58 |     305    |   string     literal |                L36 |[33]=== Testing Library Functions ===
+|  58 |     305    |   string     literal |                L36 |[27] Testing Library Functions 
 |  59 |     309    |   integer   variable |      mainpowresult |0
 |  60 |     311    |   integer   LIB FUNC |              power |
 |  61 |     319    |   string     literal |                L37 |[27]pow(2, 3) = 2 to power 3 = 
@@ -671,7 +671,7 @@
 |  97 |     529    |   string     literal |                L55 |[3]ABC
 |  98 |     533    |   integer   variable |           maincmp3 |0
 |  99 |     543    |   string     literal |                L56 |[42]compare(str4, str5) = compare(XYZ, ABC) = 
-| 100 |     552    |   string     literal |                L57 |[28]=== All tests completed! ===
+| 100 |     552    |   string     literal |                L57 |[22] All tests completed! 
 | 101 |     555    |   string     literal |                L58 |[17]Program finished!
 
 -------------------------------------------------------------------------
@@ -4962,7 +4962,7 @@
 |2    |  10        |  integer   variable  |  _factorialresult  |0
 |3    |  369       |  integer    literal  |  L1                |1
 |4    |  16        |  integer   variable  |  _factoriali       |0
-|5    |  45        | string     literal   |  L2                |[24]=== Testing Function ===
+|5    |  45        | string     literal   |  L2                |[18] Testing Function 
 |6    |  49        |  integer   variable  |  mainnum           |0
 |7    |  329       |  integer    literal  |  L3                |5
 |8    |  55        |  integer   variable  |  mainfact          |0
@@ -5015,7 +5015,7 @@
 |55   |  276       |  integer   variable  |  maini             |0
 |56   |  286       | string     literal   |  L34               |[10]Iteration 
 |57   |  299       | string     literal   |  L35               |[26]Cycle finished. Final i = 
-|58   |  305       | string     literal   |  L36               |[33]=== Testing Library Functions ===
+|58   |  305       | string     literal   |  L36               |[27] Testing Library Functions 
 |59   |  309       |  integer   variable  |  mainpowresult     |0
 |60   |  311       |  integer   LIB FUNC  |  power             |
 |61   |  319       | string     literal   |  L37               |[27]pow(2, 3) = 2 to power 3 = 
@@ -5057,7 +5057,7 @@
 |97   |  529       | string     literal   |  L55               |[3]ABC
 |98   |  533       |  integer   variable  |  maincmp3          |0
 |99   |  543       | string     literal   |  L56               |[42]compare(str4, str5) = compare(XYZ, ABC) = 
-|100  |  552       | string     literal   |  L57               |[28]=== All tests completed! ===
+|100  |  552       | string     literal   |  L57               |[22] All tests completed! 
 |101  |  555       | string     literal   |  L58               |[17]Program finished!
 
 -------------------------------------------------------------------------

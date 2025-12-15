@@ -109,13 +109,11 @@ namespace IT
 				for (int i = 0; parseValue[i] != '\0' && i < 255; i++)
 					lower[i] = tolower(parseValue[i]);
 				lower[255] = '\0';
-				if (strstr(lower, "true") || strstr(lower, "истина") || strstr(lower, "да") ||
-					strstr(lower, "yes") || strstr(lower, "1") || strstr(lower, "+") ||
-					strstr(lower, "on") || strstr(lower, "вкл"))
+				if (strstr(lower, "true") ||
+					strstr(lower, "yes") || strstr(lower, "1"))
 					temp = 1;
-				else if (strstr(lower, "false") || strstr(lower, "ложь") || strstr(lower, "нет") ||
-					strstr(lower, "no") || strstr(lower, "0") || strstr(lower, "-") ||
-					strstr(lower, "off") || strstr(lower, "выкл"))
+				else if (strstr(lower, "false") ||
+					strstr(lower, "no") || strstr(lower, "0"))
 					temp = 0;
 				else
 				{
