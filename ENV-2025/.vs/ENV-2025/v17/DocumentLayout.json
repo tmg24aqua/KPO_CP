@@ -3,12 +3,32 @@
   "WorkspaceRootPath": "C:\\KPO_CP\\ENV-2025\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2F0FFCAF-6809-4B36-BECF-FD55CE20F82D}|ENV2025Lib\\ENV2025Lib.vcxproj|C:\\KPO_CP\\ENV-2025\\ENV2025Lib\\ENV2025Lib.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{2F0FFCAF-6809-4B36-BECF-FD55CE20F82D}|ENV2025Lib\\ENV2025Lib.vcxproj|solutionrelative:ENV2025Lib\\ENV2025Lib.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{1D18AD98-FB72-4207-81C5-1A954DE66886}|ENV-2025\\ENV-2025.vcxproj|C:\\KPO_CP\\ENV-2025\\ENV-2025\\Semantic.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{1D18AD98-FB72-4207-81C5-1A954DE66886}|ENV-2025\\ENV-2025.vcxproj|solutionrelative:ENV-2025\\Semantic.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D18AD98-FB72-4207-81C5-1A954DE66886}|ENV-2025\\ENV-2025.vcxproj|C:\\KPO_CP\\ENV-2025\\ENV-2025\\ENV-2025.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{1D18AD98-FB72-4207-81C5-1A954DE66886}|ENV-2025\\ENV-2025.vcxproj|solutionrelative:ENV-2025\\ENV-2025.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1D18AD98-FB72-4207-81C5-1A954DE66886}|ENV-2025\\ENV-2025.vcxproj|C:\\KPO_CP\\ENV-2025\\ENV-2025\\Rule.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{1D18AD98-FB72-4207-81C5-1A954DE66886}|ENV-2025\\ENV-2025.vcxproj|solutionrelative:ENV-2025\\Rule.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D18AD98-FB72-4207-81C5-1A954DE66886}|ENV-2025\\ENV-2025.vcxproj|C:\\KPO_CP\\ENV-2025\\ENV-2025\\Graphs.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{1D18AD98-FB72-4207-81C5-1A954DE66886}|ENV-2025\\ENV-2025.vcxproj|solutionrelative:ENV-2025\\Graphs.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D18AD98-FB72-4207-81C5-1A954DE66886}|ENV-2025\\ENV-2025.vcxproj|C:\\KPO_CP\\ENV-2025\\ENV-2025\\LexAnaliz.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{1D18AD98-FB72-4207-81C5-1A954DE66886}|ENV-2025\\ENV-2025.vcxproj|solutionrelative:ENV-2025\\LexAnaliz.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D18AD98-FB72-4207-81C5-1A954DE66886}|ENV-2025\\ENV-2025.vcxproj|C:\\KPO_CP\\ENV-2025\\ENV-2025\\Greibach.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{1D18AD98-FB72-4207-81C5-1A954DE66886}|ENV-2025\\ENV-2025.vcxproj|solutionrelative:ENV-2025\\Greibach.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F0FFCAF-6809-4B36-BECF-FD55CE20F82D}|ENV2025Lib\\ENV2025Lib.vcxproj|C:\\KPO_CP\\ENV-2025\\ENV2025Lib\\ENV2025Lib.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2F0FFCAF-6809-4B36-BECF-FD55CE20F82D}|ENV2025Lib\\ENV2025Lib.vcxproj|solutionrelative:ENV2025Lib\\ENV2025Lib.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1D18AD98-FB72-4207-81C5-1A954DE66886}|ENV-2025\\ENV-2025.vcxproj|C:\\KPO_CP\\ENV-2025\\ENV-2025\\Parm.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -31,14 +51,6 @@
       "RelativeMoniker": "D:0:0:{1D18AD98-FB72-4207-81C5-1A954DE66886}|ENV-2025\\ENV-2025.vcxproj|solutionrelative:ENV-2025\\IT.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1D18AD98-FB72-4207-81C5-1A954DE66886}|ENV-2025\\ENV-2025.vcxproj|C:\\KPO_CP\\ENV-2025\\ENV-2025\\Greibach.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{1D18AD98-FB72-4207-81C5-1A954DE66886}|ENV-2025\\ENV-2025.vcxproj|solutionrelative:ENV-2025\\Greibach.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1D18AD98-FB72-4207-81C5-1A954DE66886}|ENV-2025\\ENV-2025.vcxproj|C:\\KPO_CP\\ENV-2025\\ENV-2025\\Graphs.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{1D18AD98-FB72-4207-81C5-1A954DE66886}|ENV-2025\\ENV-2025.vcxproj|solutionrelative:ENV-2025\\Graphs.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1D18AD98-FB72-4207-81C5-1A954DE66886}|ENV-2025\\ENV-2025.vcxproj|C:\\KPO_CP\\ENV-2025\\ENV-2025\\Generator.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{1D18AD98-FB72-4207-81C5-1A954DE66886}|ENV-2025\\ENV-2025.vcxproj|solutionrelative:ENV-2025\\Generator.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -49,10 +61,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{1D18AD98-FB72-4207-81C5-1A954DE66886}|ENV-2025\\ENV-2025.vcxproj|C:\\KPO_CP\\ENV-2025\\ENV-2025\\MFST.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{1D18AD98-FB72-4207-81C5-1A954DE66886}|ENV-2025\\ENV-2025.vcxproj|solutionrelative:ENV-2025\\MFST.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1D18AD98-FB72-4207-81C5-1A954DE66886}|ENV-2025\\ENV-2025.vcxproj|C:\\KPO_CP\\ENV-2025\\ENV-2025\\Semantic.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{1D18AD98-FB72-4207-81C5-1A954DE66886}|ENV-2025\\ENV-2025.vcxproj|solutionrelative:ENV-2025\\Semantic.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1D18AD98-FB72-4207-81C5-1A954DE66886}|ENV-2025\\ENV-2025.vcxproj|C:\\KPO_CP\\ENV-2025\\ENV-2025\\IT.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -67,20 +75,12 @@
       "RelativeMoniker": "D:0:0:{1D18AD98-FB72-4207-81C5-1A954DE66886}|ENV-2025\\ENV-2025.vcxproj|solutionrelative:ENV-2025\\pch.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1D18AD98-FB72-4207-81C5-1A954DE66886}|ENV-2025\\ENV-2025.vcxproj|C:\\KPO_CP\\ENV-2025\\ENV-2025\\ENV-2025.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{1D18AD98-FB72-4207-81C5-1A954DE66886}|ENV-2025\\ENV-2025.vcxproj|solutionrelative:ENV-2025\\ENV-2025.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1D18AD98-FB72-4207-81C5-1A954DE66886}|ENV-2025\\ENV-2025.vcxproj|C:\\KPO_CP\\ENV-2025\\ENV-2025\\LT.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{1D18AD98-FB72-4207-81C5-1A954DE66886}|ENV-2025\\ENV-2025.vcxproj|solutionrelative:ENV-2025\\LT.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1D18AD98-FB72-4207-81C5-1A954DE66886}|ENV-2025\\ENV-2025.vcxproj|C:\\KPO_CP\\ENV-2025\\ENV-2025\\FST.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{1D18AD98-FB72-4207-81C5-1A954DE66886}|ENV-2025\\ENV-2025.vcxproj|solutionrelative:ENV-2025\\FST.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1D18AD98-FB72-4207-81C5-1A954DE66886}|ENV-2025\\ENV-2025.vcxproj|C:\\KPO_CP\\ENV-2025\\ENV-2025\\LexAnaliz.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{1D18AD98-FB72-4207-81C5-1A954DE66886}|ENV-2025\\ENV-2025.vcxproj|solutionrelative:ENV-2025\\LexAnaliz.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -90,7 +90,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -98,85 +98,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "IT.cpp",
-              "DocumentMoniker": "C:\\KPO_CP\\ENV-2025\\ENV-2025\\IT.cpp",
-              "RelativeDocumentMoniker": "ENV-2025\\IT.cpp",
-              "ToolTip": "C:\\KPO_CP\\ENV-2025\\ENV-2025\\IT.cpp",
-              "RelativeToolTip": "ENV-2025\\IT.cpp",
-              "ViewState": "AgIAAOkAAAAAAAAAAAAcwG8AAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-12-15T19:43:40.565Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Graphs.h",
-              "DocumentMoniker": "C:\\KPO_CP\\ENV-2025\\ENV-2025\\Graphs.h",
-              "RelativeDocumentMoniker": "ENV-2025\\Graphs.h",
-              "ToolTip": "C:\\KPO_CP\\ENV-2025\\ENV-2025\\Graphs.h",
-              "RelativeToolTip": "ENV-2025\\Graphs.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-23T13:25:52.274Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IT.h",
-              "DocumentMoniker": "C:\\KPO_CP\\ENV-2025\\ENV-2025\\IT.h",
-              "RelativeDocumentMoniker": "ENV-2025\\IT.h",
-              "ToolTip": "C:\\KPO_CP\\ENV-2025\\ENV-2025\\IT.h",
-              "RelativeToolTip": "ENV-2025\\IT.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-12-06T09:41:42.696Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Log.h",
-              "DocumentMoniker": "C:\\KPO_CP\\ENV-2025\\ENV-2025\\Log.h",
-              "RelativeDocumentMoniker": "ENV-2025\\Log.h",
-              "ToolTip": "C:\\KPO_CP\\ENV-2025\\ENV-2025\\Log.h",
-              "RelativeToolTip": "ENV-2025\\Log.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-12-12T00:40:48.404Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "LT.h",
-              "DocumentMoniker": "C:\\KPO_CP\\ENV-2025\\ENV-2025\\LT.h",
-              "RelativeDocumentMoniker": "ENV-2025\\LT.h",
-              "ToolTip": "C:\\KPO_CP\\ENV-2025\\ENV-2025\\LT.h",
-              "RelativeToolTip": "ENV-2025\\LT.h",
-              "ViewState": "AgIAADwAAAAAAAAAAAAAAAMAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-12-06T09:45:15.009Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Parm.h",
-              "DocumentMoniker": "C:\\KPO_CP\\ENV-2025\\ENV-2025\\Parm.h",
-              "RelativeDocumentMoniker": "ENV-2025\\Parm.h",
-              "ToolTip": "C:\\KPO_CP\\ENV-2025\\ENV-2025\\Parm.h",
-              "RelativeToolTip": "ENV-2025\\Parm.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-12-14T23:20:36.866Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "Rule.h",
               "DocumentMoniker": "C:\\KPO_CP\\ENV-2025\\ENV-2025\\Rule.h",
               "RelativeDocumentMoniker": "ENV-2025\\Rule.h",
@@ -189,20 +111,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ENV2025Lib.h",
-              "DocumentMoniker": "C:\\KPO_CP\\ENV-2025\\ENV2025Lib\\ENV2025Lib.h",
-              "RelativeDocumentMoniker": "ENV2025Lib\\ENV2025Lib.h",
-              "ToolTip": "C:\\KPO_CP\\ENV-2025\\ENV2025Lib\\ENV2025Lib.h",
-              "RelativeToolTip": "ENV2025Lib\\ENV2025Lib.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-24T18:34:28.394Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "Generator.h",
               "DocumentMoniker": "C:\\KPO_CP\\ENV-2025\\ENV-2025\\Generator.h",
               "RelativeDocumentMoniker": "ENV-2025\\Generator.h",
@@ -210,12 +119,11 @@
               "RelativeToolTip": "ENV-2025\\Generator.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADQAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-12-05T19:59:14.762Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-05T19:59:14.762Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "MFST.h",
               "DocumentMoniker": "C:\\KPO_CP\\ENV-2025\\ENV-2025\\MFST.h",
               "RelativeDocumentMoniker": "ENV-2025\\MFST.h",
@@ -223,12 +131,11 @@
               "RelativeToolTip": "ENV-2025\\MFST.h",
               "ViewState": "AgIAAF0AAAAAAAAAAAAAAIIAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-12-15T14:23:16.463Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-15T14:23:16.463Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "Error.h",
               "DocumentMoniker": "C:\\KPO_CP\\ENV-2025\\ENV-2025\\Error.h",
               "RelativeDocumentMoniker": "ENV-2025\\Error.h",
@@ -236,25 +143,24 @@
               "RelativeToolTip": "ENV-2025\\Error.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-12-06T09:31:29.339Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-06T09:31:29.339Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 0,
               "Title": "Semantic.cpp",
               "DocumentMoniker": "C:\\KPO_CP\\ENV-2025\\ENV-2025\\Semantic.cpp",
               "RelativeDocumentMoniker": "ENV-2025\\Semantic.cpp",
               "ToolTip": "C:\\KPO_CP\\ENV-2025\\ENV-2025\\Semantic.cpp",
               "RelativeToolTip": "ENV-2025\\Semantic.cpp",
-              "ViewState": "AgIAAL0AAAAAAAAAAAAAACoAAAACAAAAAAAAAA==",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAEUAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-12-11T15:44:33.526Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "PolishNotation.cpp",
               "DocumentMoniker": "C:\\KPO_CP\\ENV-2025\\ENV-2025\\PolishNotation.cpp",
               "RelativeDocumentMoniker": "ENV-2025\\PolishNotation.cpp",
@@ -262,64 +168,24 @@
               "RelativeToolTip": "ENV-2025\\PolishNotation.cpp",
               "ViewState": "AgIAAIIAAAAAAAAAAAAcwKYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-11-29T11:32:31.78Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-29T11:32:31.78Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "MFST.cpp",
-              "DocumentMoniker": "C:\\KPO_CP\\ENV-2025\\ENV-2025\\MFST.cpp",
-              "RelativeDocumentMoniker": "ENV-2025\\MFST.cpp",
-              "ToolTip": "C:\\KPO_CP\\ENV-2025\\ENV-2025\\MFST.cpp",
-              "RelativeToolTip": "ENV-2025\\MFST.cpp",
-              "ViewState": "AgIAAN8AAAAAAAAAAAAcwAwBAAABAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "ENV-2025.cpp",
+              "DocumentMoniker": "C:\\KPO_CP\\ENV-2025\\ENV-2025\\ENV-2025.cpp",
+              "RelativeDocumentMoniker": "ENV-2025\\ENV-2025.cpp",
+              "ToolTip": "C:\\KPO_CP\\ENV-2025\\ENV-2025\\ENV-2025.cpp",
+              "RelativeToolTip": "ENV-2025\\ENV-2025.cpp",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAA0AAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-11-21T15:45:34.183Z",
+              "WhenOpened": "2025-12-15T17:49:03.011Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "LT.cpp",
-              "DocumentMoniker": "C:\\KPO_CP\\ENV-2025\\ENV-2025\\LT.cpp",
-              "RelativeDocumentMoniker": "ENV-2025\\LT.cpp",
-              "ToolTip": "C:\\KPO_CP\\ENV-2025\\ENV-2025\\LT.cpp",
-              "RelativeToolTip": "ENV-2025\\LT.cpp",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAcwFwAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-11-23T14:54:16.37Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "LexAnaliz.cpp",
-              "DocumentMoniker": "C:\\KPO_CP\\ENV-2025\\ENV-2025\\LexAnaliz.cpp",
-              "RelativeDocumentMoniker": "ENV-2025\\LexAnaliz.cpp",
-              "ToolTip": "C:\\KPO_CP\\ENV-2025\\ENV-2025\\LexAnaliz.cpp",
-              "RelativeToolTip": "ENV-2025\\LexAnaliz.cpp",
-              "ViewState": "AgIAAJUBAAAAAAAAAAAAABkBAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-11-21T15:20:37.77Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "FST.cpp",
-              "DocumentMoniker": "C:\\KPO_CP\\ENV-2025\\ENV-2025\\FST.cpp",
-              "RelativeDocumentMoniker": "ENV-2025\\FST.cpp",
-              "ToolTip": "C:\\KPO_CP\\ENV-2025\\ENV-2025\\FST.cpp",
-              "RelativeToolTip": "ENV-2025\\FST.cpp",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-12-06T22:43:07.295Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 5,
               "Title": "Greibach.h",
               "DocumentMoniker": "C:\\KPO_CP\\ENV-2025\\ENV-2025\\Greibach.h",
               "RelativeDocumentMoniker": "ENV-2025\\Greibach.h",
@@ -327,12 +193,145 @@
               "RelativeToolTip": "ENV-2025\\Greibach.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAEAAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-21T15:22:59.92Z",
+              "WhenOpened": "2025-11-21T15:22:59.92Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Graphs.h",
+              "DocumentMoniker": "C:\\KPO_CP\\ENV-2025\\ENV-2025\\Graphs.h",
+              "RelativeDocumentMoniker": "ENV-2025\\Graphs.h",
+              "ToolTip": "C:\\KPO_CP\\ENV-2025\\ENV-2025\\Graphs.h",
+              "RelativeToolTip": "ENV-2025\\Graphs.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-11-23T13:25:52.274Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "LT.h",
+              "DocumentMoniker": "C:\\KPO_CP\\ENV-2025\\ENV-2025\\LT.h",
+              "RelativeDocumentMoniker": "ENV-2025\\LT.h",
+              "ToolTip": "C:\\KPO_CP\\ENV-2025\\ENV-2025\\LT.h",
+              "RelativeToolTip": "ENV-2025\\LT.h",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAAMAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-12-06T09:45:15.009Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LexAnaliz.cpp",
+              "DocumentMoniker": "C:\\KPO_CP\\ENV-2025\\ENV-2025\\LexAnaliz.cpp",
+              "RelativeDocumentMoniker": "ENV-2025\\LexAnaliz.cpp",
+              "ToolTip": "C:\\KPO_CP\\ENV-2025\\ENV-2025\\LexAnaliz.cpp",
+              "RelativeToolTip": "ENV-2025\\LexAnaliz.cpp",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABkBAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-11-21T15:20:37.77Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ENV2025Lib.h",
+              "DocumentMoniker": "C:\\KPO_CP\\ENV-2025\\ENV2025Lib\\ENV2025Lib.h",
+              "RelativeDocumentMoniker": "ENV2025Lib\\ENV2025Lib.h",
+              "ToolTip": "C:\\KPO_CP\\ENV-2025\\ENV2025Lib\\ENV2025Lib.h",
+              "RelativeToolTip": "ENV2025Lib\\ENV2025Lib.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-11-24T18:34:28.394Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Parm.h",
+              "DocumentMoniker": "C:\\KPO_CP\\ENV-2025\\ENV-2025\\Parm.h",
+              "RelativeDocumentMoniker": "ENV-2025\\Parm.h",
+              "ToolTip": "C:\\KPO_CP\\ENV-2025\\ENV-2025\\Parm.h",
+              "RelativeToolTip": "ENV-2025\\Parm.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-12-14T23:20:36.866Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Log.h",
+              "DocumentMoniker": "C:\\KPO_CP\\ENV-2025\\ENV-2025\\Log.h",
+              "RelativeDocumentMoniker": "ENV-2025\\Log.h",
+              "ToolTip": "C:\\KPO_CP\\ENV-2025\\ENV-2025\\Log.h",
+              "RelativeToolTip": "ENV-2025\\Log.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-12-12T00:40:48.404Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "IT.h",
+              "DocumentMoniker": "C:\\KPO_CP\\ENV-2025\\ENV-2025\\IT.h",
+              "RelativeDocumentMoniker": "ENV-2025\\IT.h",
+              "ToolTip": "C:\\KPO_CP\\ENV-2025\\ENV-2025\\IT.h",
+              "RelativeToolTip": "ENV-2025\\IT.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-12-06T09:41:42.696Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 15,
+              "Title": "IT.cpp",
+              "DocumentMoniker": "C:\\KPO_CP\\ENV-2025\\ENV-2025\\IT.cpp",
+              "RelativeDocumentMoniker": "ENV-2025\\IT.cpp",
+              "ToolTip": "C:\\KPO_CP\\ENV-2025\\ENV-2025\\IT.cpp",
+              "RelativeToolTip": "ENV-2025\\IT.cpp",
+              "ViewState": "AgIAAOkAAAAAAAAAAAAcwG8AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-12-15T19:43:40.565Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "MFST.cpp",
+              "DocumentMoniker": "C:\\KPO_CP\\ENV-2025\\ENV-2025\\MFST.cpp",
+              "RelativeDocumentMoniker": "ENV-2025\\MFST.cpp",
+              "ToolTip": "C:\\KPO_CP\\ENV-2025\\ENV-2025\\MFST.cpp",
+              "RelativeToolTip": "ENV-2025\\MFST.cpp",
+              "ViewState": "AgIAAN8AAAAAAAAAAAAcwAwBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-11-21T15:45:34.183Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "LT.cpp",
+              "DocumentMoniker": "C:\\KPO_CP\\ENV-2025\\ENV-2025\\LT.cpp",
+              "RelativeDocumentMoniker": "ENV-2025\\LT.cpp",
+              "ToolTip": "C:\\KPO_CP\\ENV-2025\\ENV-2025\\LT.cpp",
+              "RelativeToolTip": "ENV-2025\\LT.cpp",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAcwFwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-11-23T14:54:16.37Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "FST.cpp",
+              "DocumentMoniker": "C:\\KPO_CP\\ENV-2025\\ENV-2025\\FST.cpp",
+              "RelativeDocumentMoniker": "ENV-2025\\FST.cpp",
+              "ToolTip": "C:\\KPO_CP\\ENV-2025\\ENV-2025\\FST.cpp",
+              "RelativeToolTip": "ENV-2025\\FST.cpp",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-12-06T22:43:07.295Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
               "Title": "pch.cpp",
               "DocumentMoniker": "C:\\KPO_CP\\ENV-2025\\ENV-2025\\pch.cpp",
               "RelativeDocumentMoniker": "ENV-2025\\pch.cpp",
@@ -340,21 +339,7 @@
               "RelativeToolTip": "ENV-2025\\pch.cpp",
               "ViewState": "AgIAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-11-29T11:32:58.538Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "ENV-2025.cpp",
-              "DocumentMoniker": "C:\\KPO_CP\\ENV-2025\\ENV-2025\\ENV-2025.cpp",
-              "RelativeDocumentMoniker": "ENV-2025\\ENV-2025.cpp",
-              "ToolTip": "C:\\KPO_CP\\ENV-2025\\ENV-2025\\ENV-2025.cpp",
-              "RelativeToolTip": "ENV-2025\\ENV-2025.cpp",
-              "ViewState": "AgIAAGAAAAAAAAAAAAAAABwAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-12-15T17:49:03.011Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-29T11:32:58.538Z"
             }
           ]
         }

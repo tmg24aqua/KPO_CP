@@ -15,8 +15,8 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\Debug\in.txt.asm">
+    <MASM Include="..\Debug\in.txt.asm">
       <Filter>Исходные файлы</Filter>
-    </None>
+    </MASM>
   </ItemGroup>
 </Project>
