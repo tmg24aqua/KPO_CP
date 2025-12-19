@@ -1,2 +1,17 @@
-﻿  MFST.cpp
+﻿  ENV-2025.cpp
+  Error.cpp
+  FST.cpp
+  Generator.cpp
+  Greibach.cpp
+  In.cpp
+  IT.cpp
+  LexAnaliz.cpp
+  Log.cpp
+  LT.cpp
+  MFST.cpp
+  Parm.cpp
+  pch.cpp
+  PolishNotation.cpp
+  Semantic.cpp
+  Создание кода...
   ENV-2025.vcxproj -> C:\KPO_CP\ENV-2025\Debug\ENV-2025.exe

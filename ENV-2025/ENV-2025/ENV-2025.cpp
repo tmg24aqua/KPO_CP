@@ -99,7 +99,7 @@ int _tmain(int argc, _TCHAR** argv)
 			system("pause");
 			return 0;
 		}
-		Log::WriteLineConsole("Преобразование выражений завершено без ошибок", "");
+		Log::WriteLineConsole("\nПреобразование выражений завершено без ошибок", "");
 
 
 		Log::WriteLine(log, MESSAGE, "");

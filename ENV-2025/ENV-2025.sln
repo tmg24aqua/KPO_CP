@@ -4,8 +4,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.14.36616.10
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ENV-2025", "ENV-2025\ENV-2025.vcxproj", "{1D18AD98-FB72-4207-81C5-1A954DE66886}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2F0FFCAF-6809-4B36-BECF-FD55CE20F82D} = {2F0FFCAF-6809-4B36-BECF-FD55CE20F82D}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Assembler", "Assembler\Assembler.vcxproj", "{26FCEDBD-CF31-4E11-B6FE-3759B448FFC9}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2F0FFCAF-6809-4B36-BECF-FD55CE20F82D} = {2F0FFCAF-6809-4B36-BECF-FD55CE20F82D}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ENV2025Lib", "ENV2025Lib\ENV2025Lib.vcxproj", "{2F0FFCAF-6809-4B36-BECF-FD55CE20F82D}"
 EndProject
