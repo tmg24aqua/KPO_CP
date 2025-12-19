@@ -1,0 +1,102 @@
+# ──────────────────────────────
+# Visual Studio + VS Code
+# ──────────────────────────────
+/.vs/
+/.vscode/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.userprefs
+
+# Папки с кэшем расширений и индексами — именно из-за них у тебя Permission denied и длинные пути
+FileContentIndex/
+vs/
+packages/
+.vsinternal/
+
+# Локальные папки сборки
+[Bb]in/
+[Oo]bj/
+
+# Выходные папки проектов
+*/bin/
+*/obj/
+*/x64/
+*/x86/
+*/Debug/
+*/Release/
+*/[Dd]ebug*/
+*/[Rr]elease*/
+
+# NuGet
+*.nupkg
+nuget.exe
+packages/
+!packages/build/          # если используешь пакеты как часть сборки — раскомментируй
+NuGet.Config
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# MSBuild
+*.cache
+*.tmp
+*.temp
+
+# Rider
+.idea/
+*.iml
+
+# ReSharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# VSIX и кэш расширений (то, что у тебя сейчас падает)
+*.vsix
+*.vsidx
+*.vsid
+
+# Логи и временные файлы
+*.log
+TestResult*/
+*.bak
+*.tmp
+*.cache
+*.pdb
+*.exe
+*.dll
+*.pdb
+*.cache
+*.ilk
+*.meta
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+*.swp
+*.lock
+._*
+
+# Другие IDE
+*.code-workspace
+*.idea/
+*.iml
+
+# Локальные настройки окружения
+.env
+.env.local
+appsettings.local.json
+secrets.json
